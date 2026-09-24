@@ -269,6 +269,8 @@ export const es: Dictionary = {
         { value: "33", label: "Miembros del equipo" },
         { value: "4 capas", label: "Placa propia del ordenador de vuelo" },
       ],
+      teamPhotoAlt: "Foto de grupo del equipo del Sunspear",
+      teamCaption: "El equipo del Sunspear.",
       outcome:
         "El equipo prepara el Sunspear para el EuRoC 2026, con el objetivo de ser el primer equipo estudiantil francés en volar un cohete supersónico.",
     },

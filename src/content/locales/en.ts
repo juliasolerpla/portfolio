@@ -265,6 +265,8 @@ export const en: Dictionary = {
         { value: "33", label: "Team members" },
         { value: "4-layer", label: "Custom flight-computer PCB" },
       ],
+      teamPhotoAlt: "Group photo of the Sunspear team",
+      teamCaption: "The Sunspear team.",
       outcome:
         "The team is preparing Sunspear for EuRoC 2026, aiming to become France’s first student team to fly a supersonic rocket.",
     },

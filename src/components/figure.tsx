@@ -8,16 +8,21 @@ export function Figure({
   caption,
   sizes,
   priority,
+  aspect = "aspect-[4/3]",
 }: {
   src: string;
   alt: string;
   caption?: ReactNode;
   sizes: string;
   priority?: boolean;
+  /** Tailwind aspect-ratio class of the frame. */
+  aspect?: string;
 }) {
   return (
     <figure>
-      <div className="relative aspect-[4/3] overflow-hidden rounded-[1rem] bg-white ring-1 ring-line">
+      <div
+        className={`relative ${aspect} overflow-hidden rounded-[1rem] bg-white ring-1 ring-line`}
+      >
         <Image
           src={src}
           alt={alt}

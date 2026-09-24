@@ -123,6 +123,7 @@ export const projects: ProjectEntry[] = [
     start: "2025-09",
     end: null,
     illustration: "rocket",
+    teamPhoto: "/images/projects/rocket/team.jpg",
   },
   {
     slug: "cubesat-collision-avoidance",

@@ -281,6 +281,8 @@ export const fr: Dictionary = {
         { value: "33", label: "Membres de l’équipe" },
         { value: "4 couches", label: "Carte maison de l’ordinateur de bord" },
       ],
+      teamPhotoAlt: "Photo de groupe de l’équipe du Sunspear",
+      teamCaption: "L’équipe du Sunspear.",
       outcome:
         "L’équipe prépare le Sunspear pour l’EuRoC 2026, avec l’objectif de devenir la première équipe étudiante française à faire voler une fusée supersonique.",
     },

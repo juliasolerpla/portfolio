@@ -223,6 +223,21 @@ export default async function ProjectPage({ params }: PageProps<"/[locale]/proje
                   </ul>
                 )}
               </div>
+
+              {project.teamPhoto && (
+                <div className="mt-14">
+                  <h2 className="text-2xl font-bold">{dict.project.team}</h2>
+                  <div className="mt-6">
+                    <Figure
+                      src={project.teamPhoto}
+                      alt={copy.teamPhotoAlt ?? copy.coverAlt}
+                      caption={copy.teamCaption}
+                      sizes="(min-width: 1024px) 48rem, 90vw"
+                      aspect="aspect-[21/8]"
+                    />
+                  </div>
+                </div>
+              )}
             </div>
 
             <aside>
