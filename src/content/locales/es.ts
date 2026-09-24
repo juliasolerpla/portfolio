@@ -196,7 +196,7 @@ export const es: Dictionary = {
         "Diseño y validación de un mecanismo de retención y liberación (HDRM) de un solo uso impreso en 3D para los paneles solares de un CubeSat, probado hasta 140 N y liberado con un hilo caliente en unos 4 s; todos los requisitos verificados.",
       ],
       tags: ["CubeSat", "Mecanismos", "Fabricación aditiva", "FEA", "Verificación y validación"],
-      coverAlt: "El prototipo del HDRM impreso en 3D, cerrado y sujeto por su hilo de nailon",
+      coverAlt: "Dibujo lineal de un CubeSat con los paneles solares desplegados",
       stats: [
         { value: "15 g", label: "Masa del mecanismo" },
         { value: "140 N", label: "Carga aguantada en el ensayo de tracción" },
@@ -289,7 +289,8 @@ export const es: Dictionary = {
         "MATLAB/Simulink",
         "Evitación de colisiones",
       ],
-      coverAlt: "Diagrama de la arquitectura de navegación y guiado integrada",
+      coverAlt:
+        "Dibujo lineal de una nave de servicio que se aproxima a un satélite en órbita terrestre baja",
       stats: [
         { value: "–69,8%", label: "Energía ahorrada del receptor GNSS" },
         { value: "150 m", label: "Zona de exclusión nunca vulnerada" },
@@ -338,7 +339,7 @@ export const es: Dictionary = {
         "Visualización de datos",
       ],
       coverAlt:
-        "Observaciones multiinstrumento de Juno durante un evento de compresión magnetosférica",
+        "Esquema de la magnetosfera de un planeta gigante con sus líneas de campo, el choque de proa y la magnetopausa",
       stats: [
         { value: "262", label: "Eventos de compresión catalogados" },
         { value: "32", label: "Clasificados como alta prioridad" },

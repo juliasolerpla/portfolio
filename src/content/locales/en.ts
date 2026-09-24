@@ -196,7 +196,7 @@ export const en: Dictionary = {
         "Designed and validated a 3D-printed, single-shot Hold-Down Release Mechanism for a CubeSat’s solar panels, load-tested to 140 N and released by a NiChrome burn wire in about 4 s; every requirement verified.",
       ],
       tags: ["CubeSat", "Mechanisms", "Additive manufacturing", "FEA", "Verification & validation"],
-      coverAlt: "The 3D-printed HDRM prototype, closed and held by its nylon line",
+      coverAlt: "Line drawing of a CubeSat with its solar panels deployed",
       stats: [
         { value: "15 g", label: "Mechanism mass" },
         { value: "140 N", label: "Load held in traction testing" },
@@ -285,7 +285,7 @@ export const en: Dictionary = {
         "MATLAB/Simulink",
         "Collision avoidance",
       ],
-      coverAlt: "Diagram of the integrated navigation and guidance architecture",
+      coverAlt: "Line drawing of a servicing spacecraft approaching a satellite in low Earth orbit",
       stats: [
         { value: "–69.8%", label: "GNSS receiver energy saved" },
         { value: "150 m", label: "Keep-out zone never violated" },
@@ -326,7 +326,8 @@ export const en: Dictionary = {
         "Identified a candidate heavy-ion leakage event using time-of-flight composition analysis; presented as a poster at MOP 2026.",
       ],
       tags: ["Space physics", "Magnetospheres", "Juno", "Signal analysis", "Data visualisation"],
-      coverAlt: "Juno multi-instrument observations during a magnetospheric compression event",
+      coverAlt:
+        "Diagram of a giant planet’s magnetosphere with its field lines, bow shock and magnetopause",
       stats: [
         { value: "262", label: "Compression events catalogued" },
         { value: "32", label: "Ranked high-priority" },

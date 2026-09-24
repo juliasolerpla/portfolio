@@ -202,7 +202,7 @@ export const fr: Dictionary = {
         "Calcul EF",
         "Vérification et validation",
       ],
-      coverAlt: "Le prototype du HDRM imprimé en 3D, fermé et maintenu par son fil de nylon",
+      coverAlt: "Dessin au trait d’un CubeSat aux panneaux solaires déployés",
       stats: [
         { value: "15 g", label: "Masse du mécanisme" },
         { value: "140 N", label: "Charge tenue lors de l’essai de traction" },
@@ -301,7 +301,8 @@ export const fr: Dictionary = {
         "MATLAB/Simulink",
         "Évitement de collision",
       ],
-      coverAlt: "Schéma de l’architecture de navigation et de guidage intégrée",
+      coverAlt:
+        "Dessin au trait d’un véhicule de service s’approchant d’un satellite en orbite terrestre basse",
       stats: [
         { value: "–69,8 %", label: "Énergie du récepteur GNSS économisée" },
         { value: "150 m", label: "Zone d’exclusion jamais violée" },
@@ -351,7 +352,7 @@ export const fr: Dictionary = {
         "Visualisation de données",
       ],
       coverAlt:
-        "Observations multi-instruments de Juno pendant un événement de compression magnétosphérique",
+        "Schéma de la magnétosphère d’une planète géante avec ses lignes de champ, l’onde de choc et la magnétopause",
       stats: [
         { value: "262", label: "Événements de compression catalogués" },
         { value: "32", label: "Classés haute priorité" },

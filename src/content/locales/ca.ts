@@ -195,7 +195,7 @@ export const ca: Dictionary = {
         "Disseny i validació d’un mecanisme de subjecció i alliberament (HDRM) d’un sol ús imprès en 3D per als panells solars d’un CubeSat, provat fins a 140 N i alliberat amb un fil calent en uns 4 s; tots els requisits verificats.",
       ],
       tags: ["CubeSat", "Mecanismes", "Fabricació additiva", "FEA", "Verificació i validació"],
-      coverAlt: "El prototip de l’HDRM imprès en 3D, tancat i subjectat pel fil de niló",
+      coverAlt: "Dibuix lineal d’un CubeSat amb els panells solars desplegats",
       stats: [
         { value: "15 g", label: "Massa del mecanisme" },
         { value: "140 N", label: "Càrrega aguantada en l’assaig de tracció" },
@@ -287,7 +287,8 @@ export const ca: Dictionary = {
         "MATLAB/Simulink",
         "Evitació de col·lisions",
       ],
-      coverAlt: "Diagrama de l’arquitectura de navegació i guiatge integrada",
+      coverAlt:
+        "Dibuix lineal d’una nau de servei que s’aproxima a un satèl·lit en òrbita terrestre baixa",
       stats: [
         { value: "–69,8%", label: "Energia estalviada del receptor GNSS" },
         { value: "150 m", label: "Zona d’exclusió mai vulnerada" },
@@ -336,7 +337,7 @@ export const ca: Dictionary = {
         "Visualització de dades",
       ],
       coverAlt:
-        "Observacions multiinstrument de Juno durant un esdeveniment de compressió magnetosfèrica",
+        "Esquema de la magnetosfera d’un planeta gegant amb les línies de camp, l’ona de xoc i la magnetopausa",
       stats: [
         { value: "262", label: "Esdeveniments de compressió catalogats" },
         { value: "32", label: "Classificats com a alta prioritat" },
