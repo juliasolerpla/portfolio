@@ -4,6 +4,7 @@
  */
 import type {
   EducationEntry,
+  ExtracurricularEntry,
   ExperienceEntry,
   LanguageEntry,
   ProjectEntry,
@@ -86,6 +87,10 @@ export const experience: ExperienceEntry[] = [
     end: "2022-08",
     tools: [],
   },
+];
+
+export const extracurricular: ExtracurricularEntry[] = [
+  { id: "upcOrchestra", place: "barcelona", start: "2020-09", end: "2025-06" },
 ];
 
 /** Shown in this order on the home page and the projects page. */

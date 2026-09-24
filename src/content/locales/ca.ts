@@ -168,6 +168,13 @@ export const ca: Dictionary = {
     "Música: piano i saxòfon",
     "Astronomia amateur",
   ],
+  extracurricular: {
+    upcOrchestra: {
+      title: "Orquestra de la UPC",
+      role: "Saxofonista",
+      bullets: ["Saxofonista a l’orquestra universitària."],
+    },
+  },
   publications: [
     {
       text: "F. Martin, J. Soler i Pla, N. André, «Plasma leakage through the magnetospheric boundaries of Jupiter and Saturn», pòster a MOP 2026 (Magnetospheres of the Outer Planets), Tolosa.",

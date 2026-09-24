@@ -7,6 +7,7 @@
 export type PlaceId = "toulouse" | "barcelona" | "palafolls";
 export type EducationId = "isae" | "upcAerospace" | "upcTelecom";
 export type ExperienceId = "aimsun" | "iziRecord" | "summerCamps";
+export type ExtracurricularId = "upcOrchestra";
 export type LanguageId = "catalan" | "spanish" | "english" | "french";
 export type SkillGroupId = "design" | "programming" | "simulation" | "rf" | "tools";
 export type ProjectSlug =
@@ -28,6 +29,12 @@ export type ExperienceEntry = Period & {
   org: string;
   place: PlaceId;
   tools: string[];
+};
+
+/** An extracurricular activity that has no project page of its own. */
+export type ExtracurricularEntry = Period & {
+  id: ExtracurricularId;
+  place: PlaceId;
 };
 
 export type ProjectEntry = Period & {
@@ -209,6 +216,7 @@ export type Dictionary = {
       bullets: string[];
     }
   >;
+  extracurricular: Record<ExtracurricularId, { title: string; role: string; bullets: string[] }>;
   languages: Record<LanguageId, string>;
   skills: Record<SkillGroupId, string>;
   interests: string[];

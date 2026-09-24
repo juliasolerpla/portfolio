@@ -10,6 +10,7 @@ import {
   byStartDesc,
   education,
   experience,
+  extracurricular,
   getDictionary,
   languages,
   profile,
@@ -46,29 +47,56 @@ export default async function ResumePage({ params }: PageProps<"/[locale]/resume
   const period = (entry: { start: string; end: string | null }) =>
     formatPeriod(locale, entry.start, entry.end, r.present);
 
-  const projectEntries = (category: "research" | "extracurricular") =>
-    byStartDesc(projects.filter((project) => project.category === category)).map((project) => {
-      const copy = dict.projects[project.slug];
-      return (
-        <Entry
-          key={project.slug}
-          title={copy.kind}
-          subtitle={category === "research" ? copy.title : copy.role}
-          place={project.place ? dict.places[project.place] : undefined}
-          period={period(project)}
+  const projectEntry = (project: (typeof projects)[number]) => {
+    const copy = dict.projects[project.slug];
+    return (
+      <Entry
+        key={project.slug}
+        title={copy.kind}
+        subtitle={project.category === "research" ? copy.title : copy.role}
+        place={project.place ? dict.places[project.place] : undefined}
+        period={period(project)}
+      >
+        <Bullets items={copy.resumeBullets} />
+        {project.grade && <Chips items={[`${r.grade}: ${project.grade}`]} strong />}
+        <Link
+          href={localePath(locale, `/projects/${project.slug}`)}
+          className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-navy underline-offset-4 hover:underline"
         >
-          <Bullets items={copy.resumeBullets} />
-          {project.grade && <Chips items={[`${r.grade}: ${project.grade}`]} strong />}
-          <Link
-            href={localePath(locale, `/projects/${project.slug}`)}
-            className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-navy underline-offset-4 hover:underline"
+          {r.viewProject}
+          <ArrowIcon className="size-4" />
+        </Link>
+      </Entry>
+    );
+  };
+
+  const researchEntries = byStartDesc(projects.filter((p) => p.category === "research")).map(
+    projectEntry,
+  );
+
+  // Extracurricular projects and plain activities (no project page), most recent first.
+  const extracurricularEntries = byStartDesc([
+    ...projects
+      .filter((p) => p.category === "extracurricular")
+      .map((p) => ({ start: p.start, node: projectEntry(p) })),
+    ...extracurricular.map((activity) => {
+      const copy = dict.extracurricular[activity.id];
+      return {
+        start: activity.start,
+        node: (
+          <Entry
+            key={activity.id}
+            title={copy.title}
+            subtitle={copy.role}
+            place={dict.places[activity.place]}
+            period={period(activity)}
           >
-            {r.viewProject}
-            <ArrowIcon className="size-4" />
-          </Link>
-        </Entry>
-      );
-    });
+            <Bullets items={copy.bullets} />
+          </Entry>
+        ),
+      };
+    }),
+  ]).map((item) => item.node);
 
   return (
     <div className="container-page pt-8 pb-24 md:pt-14 md:pb-32">
@@ -134,8 +162,8 @@ export default async function ResumePage({ params }: PageProps<"/[locale]/resume
             })}
           </Section>
 
-          <Section title={r.sections.research}>{projectEntries("research")}</Section>
-          <Section title={r.sections.extracurricular}>{projectEntries("extracurricular")}</Section>
+          <Section title={r.sections.research}>{researchEntries}</Section>
+          <Section title={r.sections.extracurricular}>{extracurricularEntries}</Section>
 
           {dict.publications.length > 0 && (
             <Section title={r.sections.publications}>
