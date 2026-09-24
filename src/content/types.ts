@@ -57,6 +57,8 @@ export type ProjectEntry = Period & {
   outcomePhoto?: string;
   /** Photos shown under the outcome text, side by side (e.g. team and stage photos). */
   outcomeImages?: readonly string[];
+  /** Tailwind aspect-ratio class for `outcomeImages` (default 4:3), e.g. `aspect-[3/4]` for portraits. */
+  outcomeAspect?: string;
   /** Team or event photo, shown near the end of the page. */
   teamPhoto?: string;
 };

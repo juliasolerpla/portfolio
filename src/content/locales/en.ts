@@ -366,9 +366,16 @@ export const en: Dictionary = {
       ],
       outcome:
         "We presented this work as a poster at MOP 2026 (Magnetospheres of the Outer Planets), in Toulouse, with Fiona Martin, supervised by Nicolas André (IRAP). Next steps: extend the analysis to the JEDI instrument, and to Saturn with Cassini data.",
-      outcomePhotoAlt:
-        "Poster: Plasma leakage through the magnetospheric boundaries of Jupiter and Saturn, presented at MOP 2026",
-      outcomeCaption: "Poster presented at MOP 2026, Toulouse.",
+      outcomeFigures: [
+        {
+          alt: "Two people standing beside the poster at MOP 2026",
+          caption: "With Fiona Martin at MOP 2026, Toulouse.",
+        },
+        {
+          alt: "Poster: Plasma leakage through the magnetospheric boundaries of Jupiter and Saturn, presented at MOP 2026",
+          caption: "Poster presented at MOP 2026, Toulouse.",
+        },
+      ],
       outcomeLinks: [{ label: "View poster", href: "/images/projects/plasma/poster.jpg" }],
     },
   },

@@ -214,6 +214,7 @@ export default async function ProjectPage({ params }: PageProps<"/[locale]/proje
                         src={src}
                         alt={copy.outcomeFigures![i]?.alt ?? copy.coverAlt}
                         caption={copy.outcomeFigures![i]?.caption}
+                        aspect={project.outcomeAspect}
                         sizes="(min-width: 1024px) 22rem, (min-width: 640px) 20rem, 90vw"
                       />
                     ))}

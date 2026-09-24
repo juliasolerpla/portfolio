@@ -154,7 +154,8 @@ export const projects: ProjectEntry[] = [
       "/images/projects/plasma/compression-events.png",
       "/images/projects/plasma/spectrogram.png",
     ],
-    outcomePhoto: "/images/projects/plasma/poster.jpg",
+    outcomeImages: ["/images/projects/plasma/presenting.jpg", "/images/projects/plasma/poster.jpg"],
+    outcomeAspect: "aspect-[3/4]",
   },
 ];
 
