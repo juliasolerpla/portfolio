@@ -60,13 +60,13 @@ Each project page can show real photos and figures instead of (or alongside) its
 The image paths are language-independent (`src/content/profile.ts`); their alt text and
 captions are per language (`src/content/locales/*.ts`, in each project's entry under `projects`):
 
-| What                                                  | Path field (`profile.ts`)     | Text fields (`locales/*.ts`) |
-| ------------------------------------------------------ | ------------------------------ | ------------------------------ |
-| Hero photo, at the top of the page and on its card      | `image`                       | `coverAlt`                    |
-| "Closed/open" or "before/after" pair, under "What I did" | `designImages: [a, b]`       | `designCaption`               |
-| Results gallery (as many as you like)                   | `resultImages: [a, b, …]`    | `results: [{ alt, caption }, …]` (same order) |
-| Photo in the Outcome block (e.g. a poster, an event)    | `outcomePhoto`                | `outcomePhotoAlt`, `outcomeCaption` |
-| Team or event photo                                     | `teamPhoto`                   | `teamPhotoAlt`, `teamCaption`  |
+| What                                                     | Path field (`profile.ts`) | Text fields (`locales/*.ts`)                  |
+| -------------------------------------------------------- | ------------------------- | --------------------------------------------- |
+| Hero photo, at the top of the page and on its card       | `image`                   | `coverAlt`                                    |
+| "Closed/open" or "before/after" pair, under "What I did" | `designImages: [a, b]`    | `designCaption`                               |
+| Results gallery (as many as you like)                    | `resultImages: [a, b, …]` | `results: [{ alt, caption }, …]` (same order) |
+| Photo in the Outcome block (e.g. a poster, an event)     | `outcomePhoto`            | `outcomePhotoAlt`, `outcomeCaption`           |
+| Team or event photo                                      | `teamPhoto`               | `teamPhotoAlt`, `teamCaption`                 |
 
 Every project also needs, per language, a `stats` array (3–4 headline figures shown as a row,
 e.g. `{ value: "140 N", label: "Load held in traction testing" }`) and an `outcome` paragraph

@@ -230,33 +230,35 @@ export const en: Dictionary = {
     },
     "rocket-avionics": {
       shortTitle: "Rocket Avionics.",
-      title: "Avionics for a 9,000 m-apogee competition rocket",
+      title: "Avionics for Sunspear, a 9,000 m-apogee competition rocket",
       kind: "Supaero Space Section",
       role: "Avionics Engineer",
       summary:
-        "Flight computer, sensors and telemetry for a student competition rocket designed to reach a 9,000 m apogee.",
+        "Flight computer, sensors and telemetry for Sunspear, a student rocket aiming to become France’s first student-built supersonic rocket, targeting EuRoC 2026.",
       body: [
-        "With the Supaero Space Section, the student space club at ISAE-SUPAERO, I’m part of the team building a competition rocket designed to reach an apogee of 9,000 m.",
-        "As an avionics engineer I designed and tested the avionics subsystem — flight computer, sensors and telemetry — and managed its hardware/software integration, with a focus on reliability under high-g launch conditions.",
+        "With the Supaero Space Section, the student space club at ISAE-SUPAERO, I’m part of the Sunspear team building a competition rocket that aims to become France’s first student-built supersonic rocket, targeting the 9,000 m-apogee category at EuRoC 2026.",
+        "As an avionics engineer, I designed and tested the avionics subsystem: a custom four-layer PCB built around an ESP32-S3 flight computer, with separate power domains for the logic and the pyrotechnic circuits. The flight software runs on FreeRTOS as a finite-state machine — startup, idle, boost, coast, drogue, main and landed, plus an abort state — with altitude estimated by a Kalman filter fusing barometer and IMU data, pyrotechnic channels with continuity sensing, and telemetry sent over an 868 MHz LoRa link to a ground station. I managed the hardware/software integration, with a focus on reliability under high-g launch conditions, within a 33-person student team.",
       ],
       highlights: [
-        "Avionics subsystem design: flight computer, sensors and telemetry",
-        "Hardware/software integration",
-        "Reliability under high-g launch conditions",
-        "Subsystem testing",
+        "Custom four-layer flight-computer PCB built around an ESP32-S3",
+        "Flight software finite-state machine on FreeRTOS, from startup through landing",
+        "Altitude estimation via a Kalman filter fusing barometer and IMU data",
+        "Telemetry over an 868 MHz LoRa link to a ground station",
       ],
       resumeBullets: [
-        "Designed and tested the avionics subsystem (flight computer, sensors, telemetry) for a 9,000 m-apogee competition rocket.",
-        "Managed hardware/software integration and reliability under high-g launch conditions.",
+        "Designed and tested the avionics subsystem for Sunspear, a 9,000 m-apogee competition rocket: a custom four-layer PCB (ESP32-S3), FreeRTOS flight software and an 868 MHz LoRa telemetry link.",
+        "Managed hardware/software integration and reliability under high-g launch conditions, within a 33-person student team.",
       ],
-      tags: ["Avionics", "Embedded systems", "Telemetry", "HW/SW integration", "Testing"],
+      tags: ["Avionics", "PCB design", "Embedded systems", "Telemetry", "HW/SW integration"],
       coverAlt: "Line drawing of a sounding rocket with a detail view of its flight computer",
       stats: [
         { value: "9,000 m", label: "Target apogee" },
-        { value: "2025–", label: "Ongoing project" },
+        { value: "EuRoC 2026", label: "Target competition" },
+        { value: "33", label: "Team members" },
+        { value: "4-layer", label: "Custom flight-computer PCB" },
       ],
       outcome:
-        "The team is continuing development and testing ahead of upcoming competition trials.",
+        "The team is preparing Sunspear for EuRoC 2026, aiming to become France’s first student team to fly a supersonic rocket.",
     },
     "cubesat-collision-avoidance": {
       shortTitle: "Autonomous Collision Avoidance.",

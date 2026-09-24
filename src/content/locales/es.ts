@@ -233,34 +233,36 @@ export const es: Dictionary = {
     },
     "rocket-avionics": {
       shortTitle: "Aviónica de cohete.",
-      title: "Aviónica para un cohete de competición con un apogeo de 9.000 m",
+      title: "Aviónica para el Sunspear, un cohete de competición con un apogeo de 9.000 m",
       kind: "Supaero Space Section",
       role: "Ingeniera de aviónica",
       summary:
-        "Ordenador de vuelo, sensores y telemetría para un cohete de competición de estudiantes diseñado para alcanzar 9.000 m de apogeo.",
+        "Ordenador de vuelo, sensores y telemetría para el Sunspear, un cohete de estudiantes que aspira a ser el primer cohete supersónico construido por estudiantes en Francia, de cara al EuRoC 2026.",
       body: [
-        "Con la Supaero Space Section, el club espacial de estudiantes del ISAE-SUPAERO, formo parte del equipo que construye un cohete de competición diseñado para alcanzar un apogeo de 9.000 m.",
-        "Como ingeniera de aviónica, diseñé y probé el subsistema de aviónica (ordenador de vuelo, sensores y telemetría) y gestioné su integración hardware/software, con especial atención a la fiabilidad bajo las fuertes aceleraciones del lanzamiento.",
+        "Con la Supaero Space Section, el club espacial de estudiantes del ISAE-SUPAERO, formo parte del equipo del Sunspear, un cohete de competición que aspira a ser el primer cohete supersónico construido por estudiantes en Francia, en la categoría de apogeo de 9.000 m del EuRoC 2026.",
+        "Como ingeniera de aviónica, diseñé y probé el subsistema de aviónica: una placa de circuitos propia de 4 capas construida en torno a un ordenador de vuelo ESP32-S3, con dominios de alimentación separados para la lógica y para los circuitos pirotécnicos. El software de vuelo se ejecuta sobre FreeRTOS como una máquina de estados —despegue, espera, propulsión, planeo, paracaídas de frenado, paracaídas principal y aterrizaje, más un estado de aborto—, con la altitud estimada por un filtro de Kalman que combina el barómetro y la IMU, canales pirotécnicos con detección de continuidad, y telemetría enviada por un enlace LoRa de 868 MHz a una estación terrestre. Gestioné la integración de hardware y software, con especial atención a la fiabilidad bajo las fuertes aceleraciones del lanzamiento, dentro de un equipo de 33 personas.",
       ],
       highlights: [
-        "Diseño del subsistema de aviónica: ordenador de vuelo, sensores y telemetría",
-        "Integración hardware/software",
-        "Fiabilidad bajo las altas aceleraciones del lanzamiento",
-        "Pruebas del subsistema",
+        "Placa de circuitos propia de 4 capas construida en torno a un ESP32-S3",
+        "Máquina de estados de vuelo sobre FreeRTOS, del despegue al aterrizaje",
+        "Estimación de la altitud con un filtro de Kalman que combina barómetro e IMU",
+        "Telemetría por un enlace LoRa de 868 MHz a una estación terrestre",
       ],
       resumeBullets: [
-        "Diseño y pruebas del subsistema de aviónica (ordenador de vuelo, sensores, telemetría) de un cohete de competición con un apogeo de 9.000 m.",
-        "Gestión de la integración hardware/software y de la fiabilidad bajo las altas aceleraciones del lanzamiento.",
+        "Diseño y pruebas del subsistema de aviónica del Sunspear, un cohete de competición con un apogeo de 9.000 m: una placa propia de 4 capas (ESP32-S3), software de vuelo sobre FreeRTOS y telemetría por LoRa a 868 MHz.",
+        "Gestión de la integración hardware/software y de la fiabilidad bajo las altas aceleraciones del lanzamiento, dentro de un equipo de 33 personas.",
       ],
-      tags: ["Aviónica", "Sistemas embebidos", "Telemetría", "Integración HW/SW", "Pruebas"],
+      tags: ["Aviónica", "Diseño de PCB", "Sistemas embebidos", "Telemetría", "Integración HW/SW"],
       coverAlt:
         "Dibujo lineal de un cohete sonda con una vista de detalle de su ordenador de vuelo",
       stats: [
         { value: "9.000 m", label: "Apogeo objetivo" },
-        { value: "2025–", label: "Proyecto en curso" },
+        { value: "EuRoC 2026", label: "Competición objetivo" },
+        { value: "33", label: "Miembros del equipo" },
+        { value: "4 capas", label: "Placa propia del ordenador de vuelo" },
       ],
       outcome:
-        "El equipo sigue desarrollando y probando el cohete de cara a las próximas pruebas de competición.",
+        "El equipo prepara el Sunspear para el EuRoC 2026, con el objetivo de ser el primer equipo estudiantil francés en volar un cohete supersónico.",
     },
     "cubesat-collision-avoidance": {
       shortTitle: "Evitación autónoma de colisiones.",

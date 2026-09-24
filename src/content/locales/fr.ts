@@ -239,34 +239,42 @@ export const fr: Dictionary = {
     },
     "rocket-avionics": {
       shortTitle: "Avionique de fusée.",
-      title: "Avionique d’une fusée de compétition visant 9 000 m d’apogée",
+      title: "Avionique du Sunspear, une fusée de compétition visant 9 000 m d’apogée",
       kind: "Supaero Space Section",
       role: "Ingénieure avionique",
       summary:
-        "Ordinateur de bord, capteurs et télémesure pour une fusée étudiante de compétition conçue pour atteindre 9 000 m d’apogée.",
+        "Ordinateur de bord, capteurs et télémesure pour le Sunspear, une fusée étudiante qui vise à devenir la première fusée supersonique construite par des étudiants en France, en vue de l’EuRoC 2026.",
       body: [
-        "Au sein de la Supaero Space Section, le club spatial étudiant de l’ISAE-SUPAERO, je fais partie de l’équipe qui construit une fusée de compétition conçue pour atteindre un apogée de 9 000 m.",
-        "En tant qu’ingénieure avionique, j’ai conçu et testé le sous-système avionique (ordinateur de bord, capteurs et télémesure) et piloté son intégration matériel/logiciel, avec une attention particulière à la fiabilité sous les fortes accélérations du lancement.",
+        "Au sein de la Supaero Space Section, le club spatial étudiant de l’ISAE-SUPAERO, je fais partie de l’équipe du Sunspear, une fusée de compétition qui vise à devenir la première fusée supersonique construite par des étudiants en France, dans la catégorie 9 000 m d’apogée de l’EuRoC 2026.",
+        "En tant qu’ingénieure avionique, j’ai conçu et testé le sous-système avionique : une carte électronique maison à 4 couches construite autour d’un ordinateur de bord ESP32-S3, avec des domaines d’alimentation séparés pour la logique et pour les circuits pyrotechniques. Le logiciel de vol tourne sous FreeRTOS sous forme de machine à états — décollage, attente, propulsion, vol libre, parachute de freinage, parachute principal et atterrissage, plus un état d’abandon —, avec une altitude estimée par un filtre de Kalman combinant baromètre et centrale inertielle, des canaux pyrotechniques à détection de continuité, et une télémesure envoyée par une liaison LoRa à 868 MHz vers une station sol. J’ai piloté l’intégration matériel/logiciel, avec une attention particulière à la fiabilité sous les fortes accélérations du lancement, au sein d’une équipe de 33 personnes.",
       ],
       highlights: [
-        "Conception du sous-système avionique : ordinateur de bord, capteurs et télémesure",
-        "Intégration matériel/logiciel",
-        "Fiabilité sous les fortes accélérations du lancement",
-        "Essais du sous-système",
+        "Carte électronique maison à 4 couches construite autour d’un ESP32-S3",
+        "Machine à états de vol sous FreeRTOS, du décollage à l’atterrissage",
+        "Estimation de l’altitude par un filtre de Kalman combinant baromètre et centrale inertielle",
+        "Télémesure par une liaison LoRa à 868 MHz vers une station sol",
       ],
       resumeBullets: [
-        "Conception et essais du sous-système avionique (ordinateur de bord, capteurs, télémesure) d’une fusée de compétition visant 9 000 m d’apogée.",
-        "Pilotage de l’intégration matériel/logiciel et de la fiabilité sous les fortes accélérations du lancement.",
+        "Conception et essais du sous-système avionique du Sunspear, une fusée de compétition visant 9 000 m d’apogée : une carte maison à 4 couches (ESP32-S3), un logiciel de vol sous FreeRTOS et une télémesure LoRa à 868 MHz.",
+        "Pilotage de l’intégration matériel/logiciel et de la fiabilité sous les fortes accélérations du lancement, au sein d’une équipe de 33 personnes.",
       ],
-      tags: ["Avionique", "Systèmes embarqués", "Télémesure", "Intégration HW/SW", "Essais"],
+      tags: [
+        "Avionique",
+        "Conception de cartes électroniques",
+        "Systèmes embarqués",
+        "Télémesure",
+        "Intégration HW/SW",
+      ],
       coverAlt:
         "Dessin au trait d’une fusée-sonde avec une vue de détail de son ordinateur de bord",
       stats: [
         { value: "9 000 m", label: "Apogée visé" },
-        { value: "2025–", label: "Projet en cours" },
+        { value: "EuRoC 2026", label: "Compétition visée" },
+        { value: "33", label: "Membres de l’équipe" },
+        { value: "4 couches", label: "Carte maison de l’ordinateur de bord" },
       ],
       outcome:
-        "L’équipe poursuit le développement et les essais avant les prochaines épreuves de compétition.",
+        "L’équipe prépare le Sunspear pour l’EuRoC 2026, avec l’objectif de devenir la première équipe étudiante française à faire voler une fusée supersonique.",
     },
     "cubesat-collision-avoidance": {
       shortTitle: "Évitement autonome de collision.",

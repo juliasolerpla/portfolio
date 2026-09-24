@@ -232,33 +232,35 @@ export const ca: Dictionary = {
     },
     "rocket-avionics": {
       shortTitle: "Aviònica de coet.",
-      title: "Aviònica per a un coet de competició amb un apogeu de 9.000 m",
+      title: "Aviònica per al Sunspear, un coet de competició amb un apogeu de 9.000 m",
       kind: "Supaero Space Section",
       role: "Enginyera d’aviònica",
       summary:
-        "Ordinador de vol, sensors i telemetria per a un coet de competició d’estudiants dissenyat per arribar a 9.000 m d’apogeu.",
+        "Ordinador de vol, sensors i telemetria per al Sunspear, un coet d’estudiants que aspira a ser el primer coet supersònic construït per estudiants a França, de cara a l’EuRoC 2026.",
       body: [
-        "Amb la Supaero Space Section, el club espacial d’estudiants de l’ISAE-SUPAERO, formo part de l’equip que construeix un coet de competició dissenyat per assolir un apogeu de 9.000 m.",
-        "Com a enginyera d’aviònica, vaig dissenyar i provar el subsistema d’aviònica (ordinador de vol, sensors i telemetria) i en vaig gestionar la integració de maquinari i programari, amb especial atenció a la fiabilitat sota les fortes acceleracions del llançament.",
+        "Amb la Supaero Space Section, el club espacial d’estudiants de l’ISAE-SUPAERO, formo part de l’equip del Sunspear, un coet de competició que aspira a ser el primer coet supersònic construït per estudiants a França, en la categoria d’apogeu de 9.000 m a l’EuRoC 2026.",
+        "Com a enginyera d’aviònica, vaig dissenyar i provar el subsistema d’aviònica: una placa de circuits pròpia de 4 capes construïda al voltant d’un ordinador de vol ESP32-S3, amb dominis d’alimentació separats per a la lògica i per als circuits pirotècnics. El programari de vol s’executa sobre FreeRTOS com una màquina d’estats —enlairament, espera, propulsió, planeig, paracaigudes de frenada, paracaigudes principal i aterratge, més un estat d’avortament—, amb l’altitud estimada per un filtre de Kalman que combina el baròmetre i la IMU, canals pirotècnics amb detecció de continuïtat, i telemetria enviada per un enllaç LoRa de 868 MHz a una estació terrestre. Vaig gestionar la integració de maquinari i programari, amb especial atenció a la fiabilitat sota les fortes acceleracions del llançament, dins un equip de 33 persones.",
       ],
       highlights: [
-        "Disseny del subsistema d’aviònica: ordinador de vol, sensors i telemetria",
-        "Integració de maquinari i programari",
-        "Fiabilitat sota les acceleracions elevades del llançament",
-        "Proves del subsistema",
+        "Placa de circuits pròpia de 4 capes construïda al voltant d’un ESP32-S3",
+        "Màquina d’estats de vol sobre FreeRTOS, de l’enlairament a l’aterratge",
+        "Estimació de l’altitud amb un filtre de Kalman que combina baròmetre i IMU",
+        "Telemetria per un enllaç LoRa de 868 MHz a una estació terrestre",
       ],
       resumeBullets: [
-        "Disseny i proves del subsistema d’aviònica (ordinador de vol, sensors, telemetria) d’un coet de competició amb un apogeu de 9.000 m.",
-        "Gestió de la integració de maquinari i programari i de la fiabilitat sota les acceleracions elevades del llançament.",
+        "Disseny i proves del subsistema d’aviònica del Sunspear, un coet de competició amb un apogeu de 9.000 m: una placa pròpia de 4 capes (ESP32-S3), programari de vol sobre FreeRTOS i telemetria per LoRa a 868 MHz.",
+        "Gestió de la integració de maquinari i programari i de la fiabilitat sota les acceleracions elevades del llançament, dins un equip de 33 persones.",
       ],
-      tags: ["Aviònica", "Sistemes encastats", "Telemetria", "Integració HW/SW", "Proves"],
+      tags: ["Aviònica", "Disseny de PCB", "Sistemes encastats", "Telemetria", "Integració HW/SW"],
       coverAlt: "Dibuix lineal d’un coet sonda amb una vista de detall del seu ordinador de vol",
       stats: [
         { value: "9.000 m", label: "Apogeu objectiu" },
-        { value: "2025–", label: "Projecte en curs" },
+        { value: "EuRoC 2026", label: "Competició objectiu" },
+        { value: "33", label: "Membres de l’equip" },
+        { value: "4 capes", label: "Placa pròpia de l’ordinador de vol" },
       ],
       outcome:
-        "L’equip continua desenvolupant i provant el coet de cara a les properes proves de competició.",
+        "L’equip prepara el Sunspear per a l’EuRoC 2026, amb l’objectiu de ser el primer equip estudiantil francès a fer volar un coet supersònic.",
     },
     "cubesat-collision-avoidance": {
       shortTitle: "Evitació de col·lisions autònoma.",
