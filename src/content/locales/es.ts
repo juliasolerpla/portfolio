@@ -314,15 +314,11 @@ export const es: Dictionary = {
           alt: "Diagrama de la arquitectura de navegación y guiado integrada",
           caption: "Arquitectura integrada de navegación y guiado.",
         },
+        { alt: "Parte del equipo del proyecto delante de un avión", caption: "Parte del equipo." },
         {
-          alt: "Separación entre la nave y la basura durante el encuentro, con el radio de seguridad y la zona de exclusión",
+          alt: "Presentación en el escenario del diagrama de bloques del filtro de Kalman unscented",
           caption:
-            "Separación a lo largo de un encuentro simulado de 6.743 s con datos GNSS reales del Sentinel-6A: el radio de seguridad adaptativo mantiene la basura fuera de la zona de exclusión de 150 m.",
-        },
-        {
-          alt: "Esfuerzo de control y Δv acumulado durante la maniobra de evitación",
-          caption:
-            "Esfuerzo de control y Δv acumulado durante la maniobra de evitación: unos 2 m/s en total.",
+            "Presentando nuestro filtro de navegación en la final del Student Aerospace Challenge.",
         },
       ],
       outcome: "Presentamos este trabajo en la final del Student Aerospace Challenge, en París.",

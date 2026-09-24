@@ -135,9 +135,9 @@ export const projects: ProjectEntry[] = [
     illustration: "rendezvous",
     wideResults: [0],
     resultImages: [
-      "/images/projects/collision-avoidance/hero.png",
-      "/images/projects/collision-avoidance/separation.png",
-      "/images/projects/collision-avoidance/delta-v.png",
+      "/images/projects/collision-avoidance/architecture.png",
+      "/images/projects/collision-avoidance/team.jpg",
+      "/images/projects/collision-avoidance/presenting.jpg",
     ],
   },
   {

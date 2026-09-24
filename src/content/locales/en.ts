@@ -310,14 +310,12 @@ export const en: Dictionary = {
           caption: "Integrated navigation and guidance architecture.",
         },
         {
-          alt: "Spacecraft–debris separation over the encounter, with the safety radius and keep-out zone",
-          caption:
-            "Separation over a 6,743 s simulated encounter with real Sentinel-6A GNSS data: the adaptive safety radius keeps the debris outside the 150 m keep-out zone.",
+          alt: "Part of the project team standing in front of an aircraft",
+          caption: "Part of the team.",
         },
         {
-          alt: "Control effort and accumulated Δv during the avoidance manoeuvre",
-          caption:
-            "Control effort and accumulated Δv for the avoidance manoeuvre — about 2 m/s in total.",
+          alt: "Presenting the Unscented Kalman Filter block diagram on stage",
+          caption: "Presenting our navigation filter at the Student Aerospace Challenge final.",
         },
       ],
       outcome: "We presented this work at the Student Aerospace Challenge final in Paris.",

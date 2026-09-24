@@ -312,15 +312,11 @@ export const ca: Dictionary = {
           alt: "Diagrama de l’arquitectura de navegació i guiatge integrada",
           caption: "Arquitectura integrada de navegació i guiatge.",
         },
+        { alt: "Part de l’equip del projecte davant d’un avió", caption: "Part de l’equip." },
         {
-          alt: "Separació entre la nau i la deixalla durant la trobada, amb el radi de seguretat i la zona d’exclusió",
+          alt: "Presentació a l’escenari del diagrama de blocs del filtre de Kalman unscented",
           caption:
-            "Separació al llarg d’una trobada simulada de 6.743 s amb dades GNSS reals del Sentinel-6A: el radi de seguretat adaptatiu manté la deixalla fora de la zona d’exclusió de 150 m.",
-        },
-        {
-          alt: "Esforç de control i Δv acumulat durant la maniobra d’evitació",
-          caption:
-            "Esforç de control i Δv acumulat durant la maniobra d’evitació: uns 2 m/s en total.",
+            "Presentant el nostre filtre de navegació a la final del Student Aerospace Challenge.",
         },
       ],
       outcome: "Vam presentar aquest treball a la final del Student Aerospace Challenge, a París.",

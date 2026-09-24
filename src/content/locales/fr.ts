@@ -327,14 +327,13 @@ export const fr: Dictionary = {
           caption: "Architecture intégrée de navigation et de guidage.",
         },
         {
-          alt: "Séparation entre le véhicule et le débris pendant la rencontre, avec le rayon de sécurité et la zone d’exclusion",
-          caption:
-            "Séparation sur une rencontre simulée de 6 743 s avec des données GNSS réelles de Sentinel-6A : le rayon de sécurité adaptatif maintient le débris hors de la zone d’exclusion de 150 m.",
+          alt: "Une partie de l’équipe du projet devant un avion",
+          caption: "Une partie de l’équipe.",
         },
         {
-          alt: "Effort de commande et Δv accumulé pendant la manœuvre d’évitement",
+          alt: "Présentation sur scène du schéma du filtre de Kalman unscented",
           caption:
-            "Effort de commande et Δv accumulé pendant la manœuvre d’évitement : environ 2 m/s au total.",
+            "Présentation de notre filtre de navigation à la finale du Student Aerospace Challenge.",
         },
       ],
       outcome:
