@@ -309,10 +309,9 @@ export const en: Dictionary = {
           alt: "Diagram of the integrated navigation and guidance architecture",
           caption: "Integrated navigation and guidance architecture.",
         },
-        {
-          alt: "Part of the project team standing in front of an aircraft",
-          caption: "Part of the team.",
-        },
+      ],
+      outcomeFigures: [
+        { alt: "Part of the project team standing in front of an aircraft", caption: "The team." },
         {
           alt: "Presenting the Unscented Kalman Filter block diagram on stage",
           caption: "Presenting our navigation filter at the Student Aerospace Challenge final.",

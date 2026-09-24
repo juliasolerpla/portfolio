@@ -312,7 +312,9 @@ export const ca: Dictionary = {
           alt: "Diagrama de l’arquitectura de navegació i guiatge integrada",
           caption: "Arquitectura integrada de navegació i guiatge.",
         },
-        { alt: "Part de l’equip del projecte davant d’un avió", caption: "Part de l’equip." },
+      ],
+      outcomeFigures: [
+        { alt: "Part de l’equip del projecte davant d’un avió", caption: "L’equip." },
         {
           alt: "Presentació a l’escenari del diagrama de blocs del filtre de Kalman unscented",
           caption:

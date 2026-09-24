@@ -206,6 +206,19 @@ export default async function ProjectPage({ params }: PageProps<"/[locale]/proje
                     />
                   </div>
                 )}
+                {copy.outcomeFigures && project.outcomeImages && (
+                  <div className="mt-6 grid gap-6 sm:grid-cols-2">
+                    {project.outcomeImages.map((src, i) => (
+                      <Figure
+                        key={src}
+                        src={src}
+                        alt={copy.outcomeFigures![i]?.alt ?? copy.coverAlt}
+                        caption={copy.outcomeFigures![i]?.caption}
+                        sizes="(min-width: 1024px) 22rem, (min-width: 640px) 20rem, 90vw"
+                      />
+                    ))}
+                  </div>
+                )}
                 {copy.outcomeLinks && copy.outcomeLinks.length > 0 && (
                   <ul className="mt-6 flex flex-wrap gap-3">
                     {copy.outcomeLinks.map((link) => (

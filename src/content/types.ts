@@ -55,6 +55,8 @@ export type ProjectEntry = Period & {
   wideResults?: readonly number[];
   /** Photo for the Outcome block (e.g. a poster, or a photo at an event). */
   outcomePhoto?: string;
+  /** Photos shown under the outcome text, side by side (e.g. team and stage photos). */
+  outcomeImages?: readonly string[];
   /** Team or event photo, shown near the end of the page. */
   teamPhoto?: string;
 };
@@ -94,6 +96,8 @@ export type ProjectCopy = {
   results?: { alt: string; caption: string }[];
   /** What came of the work: grade, competition, conference, paper… */
   outcome: string;
+  /** One entry per `ProjectEntry.outcomeImages`, in the same order. */
+  outcomeFigures?: { alt: string; caption: string }[];
   outcomePhotoAlt?: string;
   outcomeCaption?: string;
   outcomeLinks?: { label: string; href: string }[];

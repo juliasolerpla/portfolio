@@ -314,7 +314,9 @@ export const es: Dictionary = {
           alt: "Diagrama de la arquitectura de navegación y guiado integrada",
           caption: "Arquitectura integrada de navegación y guiado.",
         },
-        { alt: "Parte del equipo del proyecto delante de un avión", caption: "Parte del equipo." },
+      ],
+      outcomeFigures: [
+        { alt: "Parte del equipo del proyecto delante de un avión", caption: "El equipo." },
         {
           alt: "Presentación en el escenario del diagrama de bloques del filtro de Kalman unscented",
           caption:

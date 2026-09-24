@@ -134,8 +134,8 @@ export const projects: ProjectEntry[] = [
     end: "2026-06",
     illustration: "rendezvous",
     wideResults: [0],
-    resultImages: [
-      "/images/projects/collision-avoidance/architecture.png",
+    resultImages: ["/images/projects/collision-avoidance/architecture.png"],
+    outcomeImages: [
       "/images/projects/collision-avoidance/team.jpg",
       "/images/projects/collision-avoidance/presenting.jpg",
     ],

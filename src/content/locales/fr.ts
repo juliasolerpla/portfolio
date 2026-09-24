@@ -326,10 +326,9 @@ export const fr: Dictionary = {
           alt: "Schéma de l’architecture de navigation et de guidage intégrée",
           caption: "Architecture intégrée de navigation et de guidage.",
         },
-        {
-          alt: "Une partie de l’équipe du projet devant un avion",
-          caption: "Une partie de l’équipe.",
-        },
+      ],
+      outcomeFigures: [
+        { alt: "Une partie de l’équipe du projet devant un avion", caption: "L’équipe." },
         {
           alt: "Présentation sur scène du schéma du filtre de Kalman unscented",
           caption:
