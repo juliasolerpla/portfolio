@@ -213,6 +213,10 @@ export const fr: Dictionary = {
         "Modèle CAO du mécanisme : fermé pour le lancement (à gauche) et ouvert après libération (à droite).",
       results: [
         {
+          alt: "Le prototype du HDRM imprimé en 3D, fermé et maintenu par son fil de nylon",
+          caption: "Le prototype final en position fermée, maintenu par un fil de nylon.",
+        },
+        {
           alt: "Simulation EF du bras de libération montrant la contrainte, le déplacement et la déformation",
           caption:
             "Simulation EF du bras de libération (contrainte de Von Mises, déplacement et déformation), utilisée pour comparer les géométries d’articulation.",
@@ -310,6 +314,10 @@ export const fr: Dictionary = {
       ],
       results: [
         {
+          alt: "Schéma de l’architecture de navigation et de guidage intégrée",
+          caption: "Architecture intégrée de navigation et de guidage.",
+        },
+        {
           alt: "Séparation entre le véhicule et le débris pendant la rencontre, avec le rayon de sécurité et la zone d’exclusion",
           caption:
             "Séparation sur une rencontre simulée de 6 743 s avec des données GNSS réelles de Sentinel-6A : le rayon de sécurité adaptatif maintient le débris hors de la zone d’exclusion de 150 m.",
@@ -360,6 +368,11 @@ export const fr: Dictionary = {
         { value: "MOP 2026", label: "Poster de conférence" },
       ],
       results: [
+        {
+          alt: "Observations multi-instruments de Juno pendant un événement de compression magnétosphérique",
+          caption:
+            "Observations multi-instruments de Juno pendant l’événement de compression du 28 juin 2017.",
+        },
         {
           alt: "Carte des événements de compression prévus autour de Jupiter, par priorité",
           caption:

@@ -206,6 +206,10 @@ export const ca: Dictionary = {
         "Model CAD del mecanisme: tancat per al llançament (esquerra) i obert després de l’alliberament (dreta).",
       results: [
         {
+          alt: "El prototip de l’HDRM imprès en 3D, tancat i subjectat pel fil de niló",
+          caption: "El prototip final en posició tancada, subjectat per un fil de niló.",
+        },
+        {
           alt: "FEA del braç d’alliberament amb la tensió, el desplaçament i la deformació",
           caption:
             "FEA del braç d’alliberament (tensió de Von Mises, desplaçament i deformació), utilitzada per comparar geometries d’articulació.",
@@ -296,6 +300,10 @@ export const ca: Dictionary = {
       ],
       results: [
         {
+          alt: "Diagrama de l’arquitectura de navegació i guiatge integrada",
+          caption: "Arquitectura integrada de navegació i guiatge.",
+        },
+        {
           alt: "Separació entre la nau i la deixalla durant la trobada, amb el radi de seguretat i la zona d’exclusió",
           caption:
             "Separació al llarg d’una trobada simulada de 6.743 s amb dades GNSS reals del Sentinel-6A: el radi de seguretat adaptatiu manté la deixalla fora de la zona d’exclusió de 150 m.",
@@ -345,6 +353,11 @@ export const ca: Dictionary = {
         { value: "MOP 2026", label: "Pòster de congrés" },
       ],
       results: [
+        {
+          alt: "Observacions multiinstrument de Juno durant un esdeveniment de compressió magnetosfèrica",
+          caption:
+            "Observacions multiinstrument de Juno durant l’esdeveniment de compressió del 28 de juny de 2017.",
+        },
         {
           alt: "Mapa dels esdeveniments de compressió previstos al voltant de Júpiter, per prioritat",
           caption:

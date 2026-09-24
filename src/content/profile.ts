@@ -104,6 +104,7 @@ export const projects: ProjectEntry[] = [
       "/images/projects/hdrm/design-open.png",
     ],
     resultImages: [
+      "/images/projects/hdrm/hero.jpg",
       "/images/projects/hdrm/fea.png",
       "/images/projects/hdrm/traction-test.jpg",
       "/images/projects/hdrm/burn-wire-test.jpg",
@@ -126,7 +127,9 @@ export const projects: ProjectEntry[] = [
     start: "2025-11",
     end: "2026-06",
     illustration: "rendezvous",
+    wideResults: [0],
     resultImages: [
+      "/images/projects/collision-avoidance/hero.png",
       "/images/projects/collision-avoidance/separation.png",
       "/images/projects/collision-avoidance/delta-v.png",
     ],
@@ -139,7 +142,9 @@ export const projects: ProjectEntry[] = [
     start: "2026-03",
     end: null,
     illustration: "magnetosphere",
+    wideResults: [0],
     resultImages: [
+      "/images/projects/plasma/hero.png",
       "/images/projects/plasma/compression-events.png",
       "/images/projects/plasma/spectrogram.png",
     ],

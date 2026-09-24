@@ -207,6 +207,10 @@ export const es: Dictionary = {
         "Modelo CAD del mecanismo: cerrado para el lanzamiento (izquierda) y abierto tras la liberación (derecha).",
       results: [
         {
+          alt: "El prototipo del HDRM impreso en 3D, cerrado y sujeto por su hilo de nailon",
+          caption: "El prototipo final en posición cerrada, sujeto por un hilo de nailon.",
+        },
+        {
           alt: "FEA del brazo de liberación con la tensión, el desplazamiento y la deformación",
           caption:
             "FEA del brazo de liberación (tensión de Von Mises, desplazamiento y deformación), usada para comparar geometrías de articulación.",
@@ -298,6 +302,10 @@ export const es: Dictionary = {
       ],
       results: [
         {
+          alt: "Diagrama de la arquitectura de navegación y guiado integrada",
+          caption: "Arquitectura integrada de navegación y guiado.",
+        },
+        {
           alt: "Separación entre la nave y la basura durante el encuentro, con el radio de seguridad y la zona de exclusión",
           caption:
             "Separación a lo largo de un encuentro simulado de 6.743 s con datos GNSS reales del Sentinel-6A: el radio de seguridad adaptativo mantiene la basura fuera de la zona de exclusión de 150 m.",
@@ -347,6 +355,11 @@ export const es: Dictionary = {
         { value: "MOP 2026", label: "Póster de congreso" },
       ],
       results: [
+        {
+          alt: "Observaciones multiinstrumento de Juno durante un evento de compresión magnetosférica",
+          caption:
+            "Observaciones multiinstrumento de Juno durante el evento de compresión del 28 de junio de 2017.",
+        },
         {
           alt: "Mapa de los eventos de compresión previstos alrededor de Júpiter, por prioridad",
           caption:

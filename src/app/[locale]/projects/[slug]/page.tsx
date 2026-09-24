@@ -174,7 +174,12 @@ export default async function ProjectPage({ params }: PageProps<"/[locale]/proje
                     {project.resultImages.map((src, i) => {
                       const result = copy.results![i];
                       return (
-                        <div key={src} data-reveal style={revealDelay(i * 100)}>
+                        <div
+                          key={src}
+                          data-reveal
+                          style={revealDelay(i * 100)}
+                          className={project.wideResults?.includes(i) ? "sm:col-span-2" : undefined}
+                        >
                           <Figure
                             src={src}
                             alt={result?.alt ?? copy.coverAlt}

@@ -207,6 +207,10 @@ export const en: Dictionary = {
         "CAD model of the mechanism: closed for launch (left) and open after release (right).",
       results: [
         {
+          alt: "The 3D-printed HDRM prototype, closed and held by its nylon line",
+          caption: "The final prototype in its closed position, held by a nylon line.",
+        },
+        {
           alt: "FEA of the releasing arm showing stress, displacement and strain",
           caption:
             "FEA of the releasing arm — von Mises stress, displacement and strain — used to compare joint geometries.",
@@ -293,6 +297,10 @@ export const en: Dictionary = {
       ],
       results: [
         {
+          alt: "Diagram of the integrated navigation and guidance architecture",
+          caption: "Integrated navigation and guidance architecture.",
+        },
+        {
           alt: "Spacecraft–debris separation over the encounter, with the safety radius and keep-out zone",
           caption:
             "Separation over a 6,743 s simulated encounter with real Sentinel-6A GNSS data: the adaptive safety radius keeps the debris outside the 150 m keep-out zone.",
@@ -335,6 +343,10 @@ export const en: Dictionary = {
         { value: "MOP 2026", label: "Conference poster" },
       ],
       results: [
+        {
+          alt: "Juno multi-instrument observations during a magnetospheric compression event",
+          caption: "Juno multi-instrument observations during the 28 June 2017 compression event.",
+        },
         {
           alt: "Map of predicted compression events around Jupiter, colour-coded by priority",
           caption:

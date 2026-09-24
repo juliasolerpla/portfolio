@@ -44,6 +44,8 @@ export type ProjectEntry = Period & {
   designImages?: readonly [string, string];
   /** Figures for the Results section, in order; each needs a matching entry in `ProjectCopy.results`. */
   resultImages?: readonly string[];
+  /** Indexes of `resultImages` shown across both columns (wide diagrams, time series). */
+  wideResults?: readonly number[];
   /** Photo for the Outcome block (e.g. a poster, or a photo at an event). */
   outcomePhoto?: string;
   /** Team or event photo, shown near the end of the page. */
