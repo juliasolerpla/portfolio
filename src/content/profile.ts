@@ -28,9 +28,9 @@ export const profile: {
   shortName: "Júlia Soler",
   email: "juliasolerpla@gmail.com",
   linkedin: "https://www.linkedin.com/in/j%C3%BAlia-soler-b9543a266/",
-  photo: null,
+  photo: "/images/julia.jpg",
   photoInset: null,
-  photoResume: null,
+  photoResume: "/images/julia.jpg",
   resumePdf: null,
 };
 

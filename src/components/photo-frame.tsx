@@ -18,7 +18,7 @@ export function PhotoFrame({ photo, alt, sizes, className, style }: Props) {
   return (
     <div className={cn("relative overflow-hidden bg-paper", className)} style={style}>
       {photo ? (
-        <Image src={photo} alt={alt} fill sizes={sizes} className="object-cover" />
+        <Image src={photo} alt={alt} fill sizes={sizes} className="object-cover object-top" />
       ) : (
         <PhotoPlaceholder />
       )}

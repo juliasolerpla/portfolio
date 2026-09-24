@@ -14,7 +14,7 @@ export function Portrait({ alt }: { alt: string }) {
           fill
           priority
           sizes="(min-width: 768px) 45vw, 100vw"
-          className="object-cover"
+          className="object-cover object-top"
         />
       ) : (
         <div className="absolute inset-0 bg-[radial-gradient(120%_90%_at_30%_15%,#34507a_0%,var(--color-navy)_45%,var(--color-navy-deep)_100%)]">
