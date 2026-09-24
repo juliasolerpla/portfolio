@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
 import { ContactBand } from "~/components/contact-band";
+import { Figure } from "~/components/figure";
 import { ArrowIcon } from "~/components/icons";
 import { ProjectCover } from "~/components/project-cover";
 import { getDictionary, getProject, projects } from "~/content";
@@ -10,7 +12,7 @@ import { isLocale } from "~/i18n/config";
 import { formatPeriod } from "~/i18n/format";
 import { localePath } from "~/i18n/routing";
 import { pageMetadata, withoutFullStop } from "~/lib/metadata";
-import { riseDelay } from "~/lib/reveal";
+import { revealDelay, riseDelay } from "~/lib/reveal";
 
 export const dynamicParams = false;
 
@@ -98,14 +100,60 @@ export default async function ProjectPage({ params }: PageProps<"/[locale]/proje
             </p>
           </header>
 
-          <div className="mt-12 grid gap-14 lg:grid-cols-[minmax(0,1fr)_18rem] lg:gap-20">
+          {/* Key numbers, right under the header — the same idea as "At a glance" on the home page. */}
+          <dl className="mt-10 grid max-w-4xl grid-cols-2 gap-x-8 gap-y-8 sm:grid-cols-4">
+            {copy.stats.map((stat, i) => (
+              <div
+                key={stat.label}
+                data-reveal
+                style={revealDelay(i * 90)}
+                className="flex flex-col-reverse border-t-2 border-ink pt-4"
+              >
+                <dt className="mt-2 text-sm leading-snug text-muted">{stat.label}</dt>
+                <dd className="text-3xl font-bold tracking-[-0.02em] md:text-4xl">{stat.value}</dd>
+              </div>
+            ))}
+          </dl>
+
+          <div className="mt-14 grid gap-14 lg:grid-cols-[minmax(0,1fr)_18rem] lg:gap-20">
             <div className="max-w-3xl">
               <p className="text-xl leading-snug font-medium md:text-2xl">{copy.summary}</p>
-              {copy.body.map((paragraph) => (
-                <p key={paragraph} className="mt-6 text-[1.0625rem] leading-relaxed text-ink/85">
+
+              <h2 className="mt-10 text-2xl font-bold">{dict.project.problem}</h2>
+              <p className="mt-4 text-[1.0625rem] leading-relaxed text-ink/85">{copy.body[0]}</p>
+
+              <h2 className="mt-10 text-2xl font-bold">{dict.project.approach}</h2>
+              {copy.body.slice(1).map((paragraph) => (
+                <p key={paragraph} className="mt-4 text-[1.0625rem] leading-relaxed text-ink/85">
                   {paragraph}
                 </p>
               ))}
+
+              {project.designImages && (
+                <figure className="mt-8">
+                  <div className="grid grid-cols-2 gap-3">
+                    {project.designImages.map((src) => (
+                      <div
+                        key={src}
+                        className="relative aspect-[4/3] overflow-hidden rounded-[1rem] bg-white ring-1 ring-line"
+                      >
+                        <Image
+                          src={src}
+                          alt={copy.designCaption ?? copy.coverAlt}
+                          fill
+                          sizes="(min-width: 1024px) 18rem, 45vw"
+                          className="object-contain p-2"
+                        />
+                      </div>
+                    ))}
+                  </div>
+                  {copy.designCaption && (
+                    <figcaption className="mt-3 text-sm text-muted">
+                      {copy.designCaption}
+                    </figcaption>
+                  )}
+                </figure>
+              )}
 
               <h2 className="mt-14 text-2xl font-bold">{dict.project.highlights}</h2>
               <ol className="mt-6 divide-y divide-line border-y border-line">
@@ -118,6 +166,58 @@ export default async function ProjectPage({ params }: PageProps<"/[locale]/proje
                   </li>
                 ))}
               </ol>
+
+              {copy.results && project.resultImages && (
+                <div className="mt-14">
+                  <h2 className="text-2xl font-bold">{dict.project.results}</h2>
+                  <div className="mt-6 grid gap-8 sm:grid-cols-2">
+                    {project.resultImages.map((src, i) => {
+                      const result = copy.results![i];
+                      return (
+                        <div key={src} data-reveal style={revealDelay(i * 100)}>
+                          <Figure
+                            src={src}
+                            alt={result?.alt ?? copy.coverAlt}
+                            caption={result?.caption}
+                            sizes="(min-width: 1024px) 22rem, (min-width: 640px) 20rem, 90vw"
+                          />
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              )}
+
+              <div className="mt-14 border-t-2 border-ink pt-8">
+                <h2 className="text-2xl font-bold">{dict.project.outcome}</h2>
+                <p className="mt-4 text-[1.0625rem] leading-relaxed text-ink/85">{copy.outcome}</p>
+                {project.outcomePhoto && (
+                  <div className="mt-6 max-w-sm">
+                    <Figure
+                      src={project.outcomePhoto}
+                      alt={copy.outcomePhotoAlt ?? copy.coverAlt}
+                      caption={copy.outcomeCaption}
+                      sizes="(min-width: 640px) 24rem, 90vw"
+                    />
+                  </div>
+                )}
+                {copy.outcomeLinks && copy.outcomeLinks.length > 0 && (
+                  <ul className="mt-6 flex flex-wrap gap-3">
+                    {copy.outcomeLinks.map((link) => (
+                      <li key={link.href}>
+                        <a
+                          href={link.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 rounded-[0.6rem_0] bg-mist px-4 py-2 text-sm font-semibold transition-colors hover:bg-navy hover:text-white"
+                        >
+                          {link.label}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
             </div>
 
             <aside>

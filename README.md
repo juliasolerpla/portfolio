@@ -54,18 +54,39 @@ Until a field is set, that spot shows a placeholder instead: an illustration of 
 1. Copy the PDF to `public/julia-soler-cv.pdf`.
 2. In `src/content/profile.ts`, set `resumePdf: "/julia-soler-cv.pdf"`. A download button appears on the resume page.
 
-### Project photos
+### Project photos, key numbers, results and outcome
 
-Each project has a technical line drawing made in SVG (`src/components/illustrations/`). To use a photo instead:
+Each project page can show real photos and figures instead of (or alongside) its line drawing.
+The image paths are language-independent (`src/content/profile.ts`); their alt text and
+captions are per language (`src/content/locales/*.ts`, in each project's entry under `projects`):
 
-1. Copy it to `public/images/projects/`, for example `cubesat-hdrm.jpg`.
-2. Add `image: "/images/projects/cubesat-hdrm.jpg"` to that project in `src/content/profile.ts`.
+| What                                                  | Path field (`profile.ts`)     | Text fields (`locales/*.ts`) |
+| ------------------------------------------------------ | ------------------------------ | ------------------------------ |
+| Hero photo, at the top of the page and on its card      | `image`                       | `coverAlt`                    |
+| "Closed/open" or "before/after" pair, under "What I did" | `designImages: [a, b]`       | `designCaption`               |
+| Results gallery (as many as you like)                   | `resultImages: [a, b, …]`    | `results: [{ alt, caption }, …]` (same order) |
+| Photo in the Outcome block (e.g. a poster, an event)    | `outcomePhoto`                | `outcomePhotoAlt`, `outcomeCaption` |
+| Team or event photo                                     | `teamPhoto`                   | `teamPhotoAlt`, `teamCaption`  |
+
+Every project also needs, per language, a `stats` array (3–4 headline figures shown as a row,
+e.g. `{ value: "140 N", label: "Load held in traction testing" }`) and an `outcome` paragraph
+(what came of the work: grade, competition, conference, paper…). `outcomeLinks` adds buttons
+to a PDF, poster or paper, e.g. `{ label: "View poster", href: "/images/projects/plasma/poster.jpg" }`.
+
+Without `image`, the SVG illustration is shown instead; without `designImages`/`resultImages`,
+those sections are simply skipped.
 
 ### Adding a new project
 
 1. Add its id to `ProjectSlug` in `src/content/types.ts`.
 2. Add its data to `projects` in `src/content/profile.ts` (the order there is the order on the site).
-3. Add its texts to `projects` in the four files in `src/content/locales/`.
+3. Add its texts to `projects` in the four files in `src/content/locales/`. TypeScript will list
+   every field `ProjectCopy` requires.
+
+## Publications & presentations
+
+Listed on the resume page from `publications` in each `src/content/locales/*.ts` file — a plain
+list of `{ text, href? }`, with "Soler i Pla" bolded automatically wherever it appears.
 
 ## Languages
 
@@ -90,4 +111,8 @@ src/
 2. Vercel detects Next.js on its own; no settings need changing. Click **Deploy**.
 3. Every `git push` to `main` publishes the site again.
 
-With a custom domain (Settings → Domains), also add the environment variable `NEXT_PUBLIC_SITE_URL` with the full address (for example `https://juliasoler.com`) under Settings → Environment Variables, so canonical links, the sitemap and the social preview image use that domain.
+The site's own domain (`https://www.juliasoler.net`) is already hardcoded as the fallback in
+`src/lib/site.ts`, used for canonical links, the sitemap and the social preview image on
+production deploys. If the domain ever changes, either edit that file or set the environment
+variable `NEXT_PUBLIC_SITE_URL` in Vercel (Settings → Environment Variables), which always
+takes priority.

@@ -41,7 +41,7 @@ export const es: Dictionary = {
     stats: [
       { value: "3,9/4", label: "Nota media (GPA) en el máster del ISAE-SUPAERO" },
       { value: "10/10", label: "Calificación de mi trabajo de fin de grado" },
-      { value: "9.000 m", label: "Apogeo objetivo del cohete de competición en el que trabajo" },
+      { value: "2", label: "Publicaciones y presentaciones" },
       { value: "4", label: "Idiomas: catalán, castellano, inglés y francés" },
     ],
   },
@@ -65,6 +65,7 @@ export const es: Dictionary = {
       experience: "Experiencia",
       research: "Proyectos académicos y de investigación",
       extracurricular: "Actividades extracurriculares",
+      publications: "Publicaciones y presentaciones",
       languages: "Idiomas",
       skills: "Competencias",
       interests: "Intereses",
@@ -85,7 +86,12 @@ export const es: Dictionary = {
   },
   project: {
     back: "Todos los proyectos",
+    problem: "El problema",
+    approach: "Qué hice",
     highlights: "Puntos clave",
+    results: "Resultados",
+    outcome: "Resultado final",
+    team: "Equipo",
     tools: "Herramientas y métodos",
     role: "Rol",
     framework: "Marco",
@@ -163,34 +169,67 @@ export const es: Dictionary = {
     "Música: piano y saxofón",
     "Astronomía amateur",
   ],
+  publications: [
+    {
+      text: "F. Martin, J. Soler i Pla, N. André, «Plasma leakage through the magnetospheric boundaries of Jupiter and Saturn», póster en MOP 2026 (Magnetospheres of the Outer Planets), Toulouse.",
+      href: "/images/projects/plasma/poster.jpg",
+    },
+    {
+      text: "A. Fernández-Acero Campoamor, E. Valverde Sacristán, Á. Yuste Pubill, G. Grande González, J. Soler i Pla, C. Xu, «Robust MPC-Based Collision Avoidance Guidance and Safe Duty-Cycled GNSS Navigation for LEO CubeSats», IEEE Aerospace Conference 2027 (en preparación).",
+    },
+  ],
   projects: {
     "cubesat-hdrm": {
       shortTitle: "Mecanismo de liberación para CubeSat.",
       title: "Mecanismo de retención y liberación (HDRM) impreso en 3D para misiones CubeSat",
       kind: "Trabajo de fin de grado",
       summary:
-        "Un mecanismo impreso en 3D que mantiene plegados los paneles solares y las antenas de un CubeSat durante el lanzamiento, diseñado y validado en condiciones de vibración elevada.",
+        "Un mecanismo impreso en 3D, de un solo uso, que mantiene cerrados los paneles solares de un CubeSat durante el lanzamiento y los libera con un hilo caliente, probado hasta un 40% por encima de su carga de diseño.",
       body: [
-        "Los paneles solares y las antenas desplegables deben soportar plegados las fuertes vibraciones del lanzamiento y, una vez en órbita, liberarse de forma fiable. Esa es la función de un mecanismo de retención y liberación (Hold-Down Release Mechanism, HDRM).",
-        "En mi trabajo de fin de grado en la UPC diseñé y validé un HDRM impreso en 3D para los paneles solares y las antenas de un CubeSat. El mecanismo se ensayó en condiciones de vibración elevada propias del lanzamiento y se verificó con una matriz de cumplimiento de requisitos.",
+        "Los paneles solares y las antenas desplegables deben aguantar plegados las cargas del lanzamiento y, una vez en órbita, liberarse de forma fiable, una sola vez, sin dejar ningún resto atrás. Esa es la función de un mecanismo de retención y liberación (Hold-Down Release Mechanism, HDRM). Los comerciales son caros, así que mi trabajo de fin de grado se preguntaba si un mecanismo impreso en 3D y de bajo coste podía hacer el mismo trabajo.",
+        "Diseñé un HDRM de un solo uso impreso en 3D en PLA: dos brazos de liberación se mantienen cerrados por un hilo de nailon, y un hilo de NiCrom lo funde por efecto Joule para liberarlos. Con FEA en SolidWorks comparé dos geometrías de articulación y elegí una articulación de fuelle de 1 mm como el mejor equilibrio entre flexibilidad y resistencia; después rediseñé los brazos con un diente de retención y guías laterales para que el enlace de retención no pudiera desplazarse lateralmente. Imprimí, monté y ensayé el prototipo.",
       ],
       highlights: [
-        "Diseño de un mecanismo de retención y liberación impreso en 3D para paneles solares y antenas",
-        "Ensayos en condiciones de vibración elevada propias del lanzamiento",
-        "Verificación con una matriz de cumplimiento de requisitos",
-        "Calificación: 10/10",
+        "HDRM de un solo uso impreso en 3D en PLA, liberado con un hilo caliente de NiCrom",
+        "Rediseño basado en FEA: una articulación de fuelle superó a una simplemente circular",
+        "Aguantó 140 N en tracción, un 40% por encima de la carga de diseño de 100 N, sin deformarse",
+        "Todos los requisitos de la matriz de evaluación verificados: aproximadamente TRL 4",
       ],
       resumeBullets: [
-        "Diseño y validación de un mecanismo de retención y liberación (HDRM) impreso en 3D para los paneles solares y las antenas de un CubeSat, ensayado en condiciones de vibración elevada de lanzamiento según una matriz de cumplimiento.",
+        "Diseño y validación de un mecanismo de retención y liberación (HDRM) de un solo uso impreso en 3D para los paneles solares de un CubeSat, probado hasta 140 N y liberado con un hilo caliente en unos 4 s; todos los requisitos verificados.",
       ],
-      tags: [
-        "CubeSat",
-        "Mecanismos",
-        "Fabricación aditiva",
-        "Ensayos de vibración",
-        "Verificación y validación",
+      tags: ["CubeSat", "Mecanismos", "Fabricación aditiva", "FEA", "Verificación y validación"],
+      coverAlt: "El prototipo del HDRM impreso en 3D, cerrado y sujeto por su hilo de nailon",
+      stats: [
+        { value: "15 g", label: "Masa del mecanismo" },
+        { value: "140 N", label: "Carga aguantada en el ensayo de tracción" },
+        { value: "4 s", label: "Tiempo medio de liberación" },
+        { value: "10/10", label: "Nota del trabajo" },
       ],
-      coverAlt: "Dibujo lineal de un CubeSat con los paneles solares desplegados",
+      designCaption:
+        "Modelo CAD del mecanismo: cerrado para el lanzamiento (izquierda) y abierto tras la liberación (derecha).",
+      results: [
+        {
+          alt: "FEA del brazo de liberación con la tensión, el desplazamiento y la deformación",
+          caption:
+            "FEA del brazo de liberación (tensión de Von Mises, desplazamiento y deformación), usada para comparar geometrías de articulación.",
+        },
+        {
+          alt: "Ensayo de tracción con el mecanismo suspendido bajo una carga de 140 N",
+          caption:
+            "Ensayo de tracción: el mecanismo aguantó 140 N, un 40% por encima de la carga de diseño de 100 N, sin deformarse.",
+        },
+        {
+          alt: "Circuito de liberación con hilo caliente durante el ensayo",
+          caption:
+            "Circuito de liberación con hilo caliente: 1,15 A y 5,3 W, liberando en una media de 4 s.",
+        },
+      ],
+      outcome:
+        "Se verificaron todos los parámetros de evaluación, lo que sitúa el prototipo en torno al TRL 4. Los siguientes pasos serían materiales de grado espacial, ensayos en cámara de vacío térmico y una versión reutilizable basada en aleaciones con memoria de forma.",
+      outcomeLinks: [
+        { label: "Ver la ficha técnica", href: "/images/projects/hdrm/datasheet.png" },
+      ],
     },
     "rocket-avionics": {
       shortTitle: "Aviónica de cohete.",
@@ -216,53 +255,117 @@ export const es: Dictionary = {
       tags: ["Aviónica", "Sistemas embebidos", "Telemetría", "Integración HW/SW", "Pruebas"],
       coverAlt:
         "Dibujo lineal de un cohete sonda con una vista de detalle de su ordenador de vuelo",
+      stats: [
+        { value: "9.000 m", label: "Apogeo objetivo" },
+        { value: "2025–", label: "Proyecto en curso" },
+      ],
+      outcome:
+        "El equipo sigue desarrollando y probando el cohete de cara a las próximas pruebas de competición.",
     },
-    "inoas-gnc": {
-      shortTitle: "GNC para encuentro orbital.",
-      title: "INOAS: navegación y control para el servicio en órbita en LEO",
+    "cubesat-collision-avoidance": {
+      shortTitle: "Evitación autónoma de colisiones.",
+      title: "Navegación GNSS eficiente y guiado MPC para CubeSats en LEO",
       kind: "Student Aerospace Challenge",
       role: "Desarrollo del sistema GNC (WP7)",
       summary:
-        "Un sistema de navegación integrado para el servicio en órbita terrestre baja, con estimación de estado mediante un UKF y control MPC para un encuentro orbital seguro.",
+        "Un sistema de navegación y guiado que mantiene un CubeSat a salvo de basura espacial en órbita terrestre baja, encendiendo el receptor GNSS solo cuando hace falta, para ahorrar energía.",
       body: [
-        "El servicio en órbita (inspeccionar, reparar o repostar satélites en el espacio) exige que una nave se aproxime a su objetivo con precisión y sin ningún riesgo de colisión. En el marco del Student Aerospace Challenge trabajé en el guiado, la navegación y el control (GNC) de una misión de este tipo (paquete de trabajo 7).",
-        "Desarrollé INOAS, un sistema de navegación integrado que equilibra la precisión del GNSS y la eficiencia energética. Implementé su estimación de estado con un filtro de Kalman unscented (UKF) y su control con control predictivo basado en modelo (MPC), para maniobras críticas de encuentro y de evitación de colisiones, y los validé en MATLAB/Simulink.",
+        "La órbita terrestre baja está cada vez más congestionada, y los satélites necesitan cada vez más evitar basura espacial por su cuenta. Eso requiere una buena estimación de la posición, pero mantener el receptor GNSS siempre encendido consume una parte importante del presupuesto energético de un CubeSat. En el marco del Student Aerospace Challenge trabajé en el guiado, la navegación y el control (GNC) de una misión de este tipo (paquete de trabajo 7).",
+        "Desarrollé un sistema de navegación integrado en el que un filtro de Kalman unscented (UKF) combina lecturas GNSS, tomadas solo cuando hace falta, con sensores auxiliares, mientras un supervisor decide cuándo encender el receptor. Sobre esa base, construí un controlador predictivo basado en modelo (MPC) que planifica maniobras de evitación en un horizonte móvil y amplía la zona de exclusión alrededor de la basura a medida que crece la incertidumbre de navegación prevista. Validé todo el lazo en MATLAB/Simulink frente a perfiles reales de error GNSS del Sentinel-6A, en un equipo de seis personas.",
       ],
       highlights: [
-        "Navegación integrada que equilibra la precisión del GNSS y la eficiencia energética",
-        "Estimación de estado con un filtro de Kalman unscented (UKF)",
-        "Control predictivo basado en modelo (MPC) para el encuentro y la evitación de colisiones",
-        "Validación en MATLAB/Simulink",
+        "Filtro de Kalman unscented que combina un GNSS de uso intermitente con sensores auxiliares",
+        "Lógica de supervisión que decide cuándo se enciende el receptor GNSS",
+        "Control predictivo basado en modelo que amplía la zona de exclusión a medida que crece la incertidumbre",
+        "Validado con perfiles reales de error GNSS del Sentinel-6A",
       ],
       resumeBullets: [
-        "Desarrollo de INOAS, un sistema de navegación integrado para el servicio en órbita en LEO que equilibra la precisión del GNSS y la eficiencia energética.",
-        "Implementación de la estimación de estado (filtro de Kalman unscented) y del control (control predictivo basado en modelo) para maniobras críticas de encuentro y de evitación de colisiones, validadas en MATLAB/Simulink.",
+        "Desarrollo de la navegación y el guiado para la evitación autónoma de colisiones de un CubeSat, equilibrando la precisión del GNSS y la eficiencia energética.",
+        "Implementación de la estimación de estado (filtro de Kalman unscented con GNSS de uso intermitente) y del guiado (control predictivo basado en modelo), validados en MATLAB/Simulink frente a datos GNSS reales.",
       ],
-      tags: ["GNC", "Filtrado de Kalman", "MPC", "MATLAB/Simulink", "Servicio en órbita"],
-      coverAlt:
-        "Dibujo lineal de una nave de servicio que se aproxima a un satélite en órbita terrestre baja",
+      tags: [
+        "GNC",
+        "Filtrado de Kalman",
+        "Control predictivo basado en modelo",
+        "MATLAB/Simulink",
+        "Evitación de colisiones",
+      ],
+      coverAlt: "Diagrama de la arquitectura de navegación y guiado integrada",
+      stats: [
+        { value: "–69,8%", label: "Energía ahorrada del receptor GNSS" },
+        { value: "150 m", label: "Zona de exclusión nunca vulnerada" },
+        { value: "~2 m/s", label: "Δv total para la evitación" },
+        { value: "2027", label: "Artículo en el IEEE Aerospace Conference" },
+      ],
+      results: [
+        {
+          alt: "Separación entre la nave y la basura durante el encuentro, con el radio de seguridad y la zona de exclusión",
+          caption:
+            "Separación a lo largo de un encuentro simulado de 6.743 s con datos GNSS reales del Sentinel-6A: el radio de seguridad adaptativo mantiene la basura fuera de la zona de exclusión de 150 m.",
+        },
+        {
+          alt: "Esfuerzo de control y Δv acumulado durante la maniobra de evitación",
+          caption:
+            "Esfuerzo de control y Δv acumulado durante la maniobra de evitación: unos 2 m/s en total.",
+        },
+      ],
+      outcome:
+        "Presentamos este trabajo en la final del Student Aerospace Challenge, en París. Un artículo que lo describe, «Robust MPC-Based Collision Avoidance Guidance and Safe Duty-Cycled GNSS Navigation for LEO CubeSats» (Fernández-Acero Campoamor, Valverde Sacristán, Yuste Pubill, Grande González, Soler i Pla, Xu), está en preparación para el IEEE Aerospace Conference 2027.",
     },
     "plasma-magnetospheres": {
       shortTitle: "Magnetosferas de planetas gigantes.",
-      title: "Fuga de plasma a través de las fronteras magnetosféricas de Júpiter y Saturno",
+      title:
+        "Fuga de plasma a través de la frontera magnetosférica de Júpiter (y, después, Saturno)",
       kind: "Proyecto de investigación de máster",
       summary:
-        "¿Cómo escapa el plasma de las magnetosferas de Júpiter y Saturno? Un proyecto de investigación basado en datos multiinstrumento de sondas espaciales.",
+        "¿Cómo escapa el plasma de la magnetosfera de Júpiter? Un proyecto de investigación basado en datos multiinstrumento de Juno, que ahora se amplía a Saturno.",
       body: [
-        "Júpiter y Saturno están envueltos en magnetosferas enormes: regiones dominadas por el propio campo magnético del planeta y protegidas del viento solar. Sus fronteras, sin embargo, no son del todo estancas: parte del plasma las atraviesa.",
-        "En mi proyecto de investigación de máster en el ISAE-SUPAERO estudio este transporte de plasma a través de las fronteras magnetosféricas de ambos planetas a partir de datos multiinstrumento de sondas espaciales, mediante análisis de señales y visualización de datos.",
+        "Júpiter está envuelto en la magnetosfera más grande del sistema solar, una región dominada por su propio campo magnético y protegida del viento solar. Su luna volcánica Ío vierte en ella iones pesados como el oxígeno y el azufre. ¿Se escapa este plasma a través de la magnetopausa hacia la magnetofunda, y cuándo?",
+        "Combino datos del magnetómetro de Juno (FGM) y de composición iónica (JADE-I) con catálogos de cruces del choque de proa y la magnetopausa. He construido una tubería que propaga el viento solar hasta Júpiter, detecta eventos de compresión y los clasifica según dónde estaba Juno, validada frente a un catálogo de cruces publicado. Los espectrogramas de tiempo de vuelo muestran después qué iones hay a cada lado de la frontera.",
       ],
       highlights: [
-        "Análisis de datos multiinstrumento de sondas espaciales",
-        "Análisis de señales y visualización de datos",
-        "Fronteras magnetosféricas de Júpiter y de Saturno",
+        "Combinación de datos del magnetómetro (FGM) y de composición iónica (JADE-I) de Juno con catálogos de cruces",
+        "Tubería construida y validada que detecta y clasifica eventos de compresión del viento solar",
+        "Análisis de composición por tiempo de vuelo a través de la magnetopausa",
+        "Identificación de un evento candidato de fuga de iones pesados en octubre de 2024",
       ],
       resumeBullets: [
-        "Estudio del transporte de plasma a través de las fronteras magnetosféricas de Júpiter y Saturno a partir de datos multiinstrumento de sondas espaciales, mediante análisis de señales y visualización de datos.",
+        "Construcción de una tubería con datos FGM y JADE-I de Juno que cataloga y clasifica eventos de compresión del viento solar en Júpiter, validada frente a un catálogo de cruces publicado.",
+        "Identificación de un evento candidato de fuga de iones pesados mediante análisis de composición por tiempo de vuelo; presentado como póster en MOP 2026.",
       ],
-      tags: ["Física espacial", "Magnetosferas", "Análisis de señales", "Visualización de datos"],
+      tags: [
+        "Física espacial",
+        "Magnetosferas",
+        "Juno",
+        "Análisis de señales",
+        "Visualización de datos",
+      ],
       coverAlt:
-        "Esquema de la magnetosfera de un planeta gigante con sus líneas de campo, el choque de proa y la magnetopausa",
+        "Observaciones multiinstrumento de Juno durante un evento de compresión magnetosférica",
+      stats: [
+        { value: "262", label: "Eventos de compresión catalogados" },
+        { value: "32", label: "Clasificados como alta prioridad" },
+        { value: "66,7%", label: "Precisión de la detección" },
+        { value: "MOP 2026", label: "Póster de congreso" },
+      ],
+      results: [
+        {
+          alt: "Mapa de los eventos de compresión previstos alrededor de Júpiter, por prioridad",
+          caption:
+            "Eventos de compresión previstos alrededor de Júpiter, clasificados por prioridad de análisis.",
+        },
+        {
+          alt: "Espectrograma de tiempo de vuelo que muestra iones pesados en la magnetofunda",
+          caption:
+            "Espectrograma de tiempo de vuelo del evento de octubre de 2024: se ven iones pesados en la magnetofunda, un indicio de fuga.",
+        },
+      ],
+      outcome:
+        "Presentamos este trabajo como póster en MOP 2026 (Magnetospheres of the Outer Planets), en Toulouse, con Fiona Martin, bajo la supervisión de Nicolas André (IRAP). Próximos pasos: ampliar el análisis al instrumento JEDI y, en Saturno, a datos de Cassini.",
+      outcomePhotoAlt:
+        "Póster: Plasma leakage through the magnetospheric boundaries of Jupiter and Saturn, presentado en MOP 2026",
+      outcomeCaption: "Póster presentado en MOP 2026, Toulouse.",
+      outcomeLinks: [{ label: "Ver el póster", href: "/images/projects/plasma/poster.jpg" }],
     },
   },
 };

@@ -10,6 +10,8 @@ export const env = createEnv({
     NODE_ENV: z.enum(["development", "test", "production"]),
     /** Set automatically by Vercel (e.g. `julia-soler.vercel.app`). */
     VERCEL_PROJECT_PRODUCTION_URL: z.string().optional(),
+    /** Set automatically by Vercel: "production", "preview" or "development". */
+    VERCEL_ENV: z.enum(["production", "preview", "development"]).optional(),
   },
 
   /**
@@ -29,6 +31,7 @@ export const env = createEnv({
   runtimeEnv: {
     NODE_ENV: process.env.NODE_ENV,
     VERCEL_PROJECT_PRODUCTION_URL: process.env.VERCEL_PROJECT_PRODUCTION_URL,
+    VERCEL_ENV: process.env.VERCEL_ENV,
     NEXT_PUBLIC_SITE_URL: process.env.NEXT_PUBLIC_SITE_URL,
   },
   /**

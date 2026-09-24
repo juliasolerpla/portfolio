@@ -10,7 +10,7 @@ export type ExperienceId = "aimsun" | "iziRecord" | "summerCamps";
 export type LanguageId = "catalan" | "spanish" | "english" | "french";
 export type SkillGroupId = "design" | "programming" | "simulation" | "rf" | "tools";
 export type ProjectSlug =
-  "cubesat-hdrm" | "rocket-avionics" | "inoas-gnc" | "plasma-magnetospheres";
+  "cubesat-hdrm" | "rocket-avionics" | "cubesat-collision-avoidance" | "plasma-magnetospheres";
 export type IllustrationId = "cubesat" | "rocket" | "rendezvous" | "magnetosphere";
 
 /** Dates are `"YYYY-MM"`; `end: null` means "ongoing". */
@@ -38,8 +38,16 @@ export type ProjectEntry = Period & {
   place: PlaceId | null;
   grade?: string;
   illustration: IllustrationId;
-  /** Photo in `public/`, e.g. `"/images/projects/cubesat-hdrm.jpg"`. Without it the illustration is shown. */
+  /** Hero photo in `public/`, e.g. `"/images/projects/hdrm/hero.jpg"`. Without it the illustration is shown. */
   image?: string;
+  /** A "before / after" or "closed / open" pair shown side by side under "What I did". */
+  designImages?: readonly [string, string];
+  /** Figures for the Results section, in order; each needs a matching entry in `ProjectCopy.results`. */
+  resultImages?: readonly string[];
+  /** Photo for the Outcome block (e.g. a poster, or a photo at an event). */
+  outcomePhoto?: string;
+  /** Team or event photo, shown near the end of the page. */
+  teamPhoto?: string;
 };
 
 export type LanguageEntry = {
@@ -61,13 +69,32 @@ export type ProjectCopy = {
   role?: string;
   /** One or two sentences: cards, page lead and meta description. */
   summary: string;
+  /** Two paragraphs: `[0]` is "The problem", the rest is "What I did". */
   body: string[];
   highlights: string[];
   /** Bullet points as they appear on the resume. */
   resumeBullets: string[];
   tags: string[];
-  /** Alt text of the cover illustration. */
+  /** Alt text of the cover illustration or hero photo. */
   coverAlt: string;
+  /** A short row of 3–4 headline figures, shown right under the hero image. */
+  stats: { value: string; label: string }[];
+  /** Caption under `ProjectEntry.designImages`, when set. */
+  designCaption?: string;
+  /** One entry per `ProjectEntry.resultImages`, in the same order. */
+  results?: { alt: string; caption: string }[];
+  /** What came of the work: grade, competition, conference, paper… */
+  outcome: string;
+  outcomePhotoAlt?: string;
+  outcomeCaption?: string;
+  outcomeLinks?: { label: string; href: string }[];
+  teamPhotoAlt?: string;
+  teamCaption?: string;
+};
+
+export type PublicationEntry = {
+  text: string;
+  href?: string;
 };
 
 export type Dictionary = {
@@ -128,6 +155,7 @@ export type Dictionary = {
       experience: string;
       research: string;
       extracurricular: string;
+      publications: string;
       languages: string;
       skills: string;
       interests: string;
@@ -146,7 +174,12 @@ export type Dictionary = {
   };
   project: {
     back: string;
+    problem: string;
+    approach: string;
     highlights: string;
+    results: string;
+    outcome: string;
+    team: string;
     tools: string;
     role: string;
     framework: string;
@@ -177,5 +210,6 @@ export type Dictionary = {
   languages: Record<LanguageId, string>;
   skills: Record<SkillGroupId, string>;
   interests: string[];
+  publications: PublicationEntry[];
   projects: Record<ProjectSlug, ProjectCopy>;
 };

@@ -99,6 +99,16 @@ export const projects: ProjectEntry[] = [
     end: "2025-07",
     grade: "10/10",
     illustration: "cubesat",
+    image: "/images/projects/hdrm/hero.jpg",
+    designImages: [
+      "/images/projects/hdrm/design-closed.png",
+      "/images/projects/hdrm/design-open.png",
+    ],
+    resultImages: [
+      "/images/projects/hdrm/fea.png",
+      "/images/projects/hdrm/traction-test.jpg",
+      "/images/projects/hdrm/burn-wire-test.jpg",
+    ],
   },
   {
     slug: "rocket-avionics",
@@ -110,13 +120,18 @@ export const projects: ProjectEntry[] = [
     illustration: "rocket",
   },
   {
-    slug: "inoas-gnc",
+    slug: "cubesat-collision-avoidance",
     category: "extracurricular",
     org: "Student Aerospace Challenge",
     place: null,
     start: "2025-11",
     end: "2026-06",
     illustration: "rendezvous",
+    image: "/images/projects/collision-avoidance/hero.png",
+    resultImages: [
+      "/images/projects/collision-avoidance/separation.png",
+      "/images/projects/collision-avoidance/delta-v.png",
+    ],
   },
   {
     slug: "plasma-magnetospheres",
@@ -126,6 +141,12 @@ export const projects: ProjectEntry[] = [
     start: "2026-03",
     end: null,
     illustration: "magnetosphere",
+    image: "/images/projects/plasma/hero.png",
+    resultImages: [
+      "/images/projects/plasma/compression-events.png",
+      "/images/projects/plasma/spectrogram.png",
+    ],
+    outcomePhoto: "/images/projects/plasma/poster.jpg",
   },
 ];
 

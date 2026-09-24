@@ -16,6 +16,7 @@ import {
   projects,
   skills,
   type LanguageEntry,
+  type PublicationEntry,
 } from "~/content";
 import { isLocale } from "~/i18n/config";
 import { formatDecimal, formatPeriod } from "~/i18n/format";
@@ -135,6 +136,12 @@ export default async function ResumePage({ params }: PageProps<"/[locale]/resume
 
           <Section title={r.sections.research}>{projectEntries("research")}</Section>
           <Section title={r.sections.extracurricular}>{projectEntries("extracurricular")}</Section>
+
+          {dict.publications.length > 0 && (
+            <Section title={r.sections.publications}>
+              <Publications items={dict.publications} />
+            </Section>
+          )}
         </div>
 
         <aside className="space-y-14">
@@ -244,6 +251,48 @@ function Entry({
       </div>
       <div className="mt-3">{children}</div>
     </article>
+  );
+}
+
+/** Splits on "Soler i Pla" so her own name can be bolded in an author list. */
+function highlightOwnName(text: string) {
+  return text.split(/(Soler i Pla)/).map((part, i) =>
+    part === "Soler i Pla" ? (
+      <strong key={i} className="font-semibold text-ink">
+        {part}
+      </strong>
+    ) : (
+      <span key={i}>{part}</span>
+    ),
+  );
+}
+
+function Publications({ items }: { items: PublicationEntry[] }) {
+  return (
+    <ul className="space-y-4">
+      {items.map((item) => (
+        <li key={item.text} className="relative pl-5 leading-relaxed text-ink/85">
+          <span
+            aria-hidden
+            className="absolute top-[0.6em] left-0 size-2 rounded-[0.35rem_0] bg-navy"
+          />
+          {highlightOwnName(item.text)}
+          {item.href && (
+            <>
+              {" "}
+              <a
+                href={item.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold text-navy underline-offset-4 hover:underline"
+              >
+                ↗
+              </a>
+            </>
+          )}
+        </li>
+      ))}
+    </ul>
   );
 }
 
