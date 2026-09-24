@@ -27,6 +27,7 @@ export const fr: Dictionary = {
     outro:
       "Faites défiler pour découvrir mes projets : des mécanismes pour CubeSat à l’avionique d’une fusée.",
     photoAlt: "Portrait de Júlia Soler",
+    insetAlt: "Júlia Soler au travail",
     linkedin: "LinkedIn",
     projects: "Projets",
     resume: "CV",
@@ -59,6 +60,7 @@ export const fr: Dictionary = {
     description:
       "Formation, expérience, projets et compétences de Júlia Soler i Pla, ingénieure en aérospatial et en télécommunications.",
     headline: "MSc en ingénierie aérospatiale — ISAE-SUPAERO",
+    photoAlt: "Photo de Júlia Soler",
     summary:
       "Ingénieure issue d’un double cursus en aérospatial et en télécommunications, je termine actuellement un MSc en ingénierie des systèmes spatiaux à l’ISAE-SUPAERO. Cinq années d’études universitaires et de recherche en master m’ont apporté une large base technique couvrant tout le cycle de vie de l’ingénierie — de la conception et la modélisation au prototypage, aux essais et à la validation — ainsi que la rigueur analytique nécessaire pour aborder des problèmes complexes. Méthodique et sincèrement passionnée par l’espace, j’ai fait mes preuves aussi bien en entreprise qu’en recherche.",
     download: "Télécharger le PDF",

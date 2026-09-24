@@ -5,6 +5,7 @@ import type { ReactNode } from "react";
 
 import { ArrowIcon, DownloadIcon, LinkedInIcon, MailIcon, MapPinIcon } from "~/components/icons";
 import { LeafButton } from "~/components/leaf-button";
+import { PhotoFrame } from "~/components/photo-frame";
 import {
   byStartDesc,
   education,
@@ -82,10 +83,19 @@ export default async function ResumePage({ params }: PageProps<"/[locale]/resume
         )}
       </header>
 
-      <div className="mt-10 max-w-3xl animate-rise" style={riseDelay(100)}>
-        <p className="text-2xl font-bold md:text-3xl">{profile.name}</p>
-        <p className="mt-2 text-lg font-semibold text-navy">{r.headline}</p>
-        <p className="mt-6 text-[1.0625rem] leading-relaxed text-ink/85">{r.summary}</p>
+      <div className="mt-10 grid gap-10 lg:grid-cols-[minmax(0,1fr)_19rem] lg:gap-20">
+        <div className="animate-rise" style={riseDelay(100)}>
+          <p className="text-2xl font-bold md:text-3xl">{profile.name}</p>
+          <p className="mt-2 text-lg font-semibold text-navy">{r.headline}</p>
+          <p className="mt-6 text-[1.0625rem] leading-relaxed text-ink/85">{r.summary}</p>
+        </div>
+        <PhotoFrame
+          photo={profile.photoResume}
+          alt={r.photoAlt}
+          sizes="(min-width: 1024px) 19rem, (min-width: 640px) 18rem, 100vw"
+          className="mx-auto aspect-[4/5] w-full max-w-[18rem] animate-rise rounded-[1.5rem] lg:mx-0 lg:max-w-none"
+          style={riseDelay(200)}
+        />
       </div>
 
       <div className="mt-16 grid gap-16 lg:grid-cols-[minmax(0,1fr)_19rem] lg:gap-20">

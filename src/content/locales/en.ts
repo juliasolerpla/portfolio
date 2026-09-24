@@ -26,6 +26,7 @@ export const en: Dictionary = {
     outro:
       "Scroll down to see what I’ve been working on — from CubeSat mechanisms to rocket avionics.",
     photoAlt: "Portrait of Júlia Soler",
+    insetAlt: "Júlia Soler at work",
     linkedin: "LinkedIn",
     projects: "Projects",
     resume: "Resume",
@@ -55,6 +56,7 @@ export const en: Dictionary = {
     description:
       "Education, experience, projects and skills of Júlia Soler i Pla, aerospace and telecommunications engineer.",
     headline: "MSc Aerospace Engineering — ISAE-SUPAERO",
+    photoAlt: "Photo of Júlia Soler",
     summary:
       "Dual-degree aerospace and telecommunications engineer, currently completing an MSc in Space Systems Engineering at ISAE-SUPAERO. Five years of combined undergraduate study and graduate research have given me a broad technical base across the full engineering lifecycle — from design and modelling to prototyping, testing and validation — along with the analytical rigour to tackle challenging problems. Methodical and genuinely passionate about space, with a proven ability to deliver in both professional and research settings.",
     download: "Download PDF",

@@ -16,31 +16,38 @@ npm run dev
 
 Open <http://localhost:3000>: it redirects to your browser's language.
 
-| Command                | What it does                           |
-| ---------------------- | -------------------------------------- |
-| `npm run dev`          | Development server                     |
-| `npm run build`        | Production build (what Vercel runs)    |
-| `npm run check`        | ESLint + type checking                 |
-| `npm run format:write` | Formats the code with Prettier         |
+| Command                | What it does                        |
+| ---------------------- | ----------------------------------- |
+| `npm run dev`          | Development server                  |
+| `npm run build`        | Production build (what Vercel runs) |
+| `npm run check`        | ESLint + type checking              |
+| `npm run format:write` | Formats the code with Prettier      |
 
 ## Where to edit the content
 
 All content lives in `src/content/`:
 
-| What                                                        | File                                   |
-| ----------------------------------------------------------- | -------------------------------------- |
-| Texts in each language (titles, descriptions, resume items) | `src/content/locales/{en,fr,ca,es}.ts` |
-| Shared data: email, LinkedIn, dates, grades, tools, languages | `src/content/profile.ts`             |
-| Shape of the content                                        | `src/content/types.ts`                 |
+| What                                                          | File                                   |
+| ------------------------------------------------------------- | -------------------------------------- |
+| Texts in each language (titles, descriptions, resume items)   | `src/content/locales/{en,fr,ca,es}.ts` |
+| Shared data: email, LinkedIn, dates, grades, tools, languages | `src/content/profile.ts`               |
+| Shape of the content                                          | `src/content/types.ts`                 |
 
 If a language is missing a text, `npm run check` (and the build) will point it out.
 
-### Adding the home-page photo
+### Adding photos of Júlia
 
-1. Copy the photo to `public/images/julia.jpg` (portrait orientation, about 1200 × 1500 px).
-2. In `src/content/profile.ts`, change `photo: null` to `photo: "/images/julia.jpg"`.
+There are three spots for a photo of Júlia, each set independently in `src/content/profile.ts`:
 
-Until there is a photo, an illustration of Saturn is shown instead.
+| Spot                                      | Field         | Suggested size (portrait) |
+| ----------------------------------------- | ------------- | ------------------------- |
+| Home page, the big portrait               | `photo`       | about 1200 × 1500 px      |
+| Home page, the small photo overlapping it | `photoInset`  | about 800 × 1000 px       |
+| Resume page, next to the summary          | `photoResume` | about 900 × 1125 px       |
+
+To add one: copy the file to `public/images/` (for example `public/images/julia.jpg`), then set the matching field to that path, e.g. `photo: "/images/julia.jpg"`.
+
+Until a field is set, that spot shows a placeholder instead: an illustration of Saturn for `photo`, and a plain camera icon for `photoInset` and `photoResume`.
 
 ### Adding the resume PDF
 

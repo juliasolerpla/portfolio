@@ -17,6 +17,10 @@ export const profile: {
   linkedin: string;
   /** Portrait on the home page, e.g. `"/images/julia.jpg"` (file in `public/images/`). `null` shows an illustration. */
   photo: string | null;
+  /** Smaller photo overlapping the portrait on the home page. `null` shows a placeholder. */
+  photoInset: string | null;
+  /** Photo next to the summary on the resume page. `null` shows a placeholder. */
+  photoResume: string | null;
   /** PDF offered on the resume page, e.g. `"/julia-soler-cv.pdf"` (file in `public/`). `null` hides the button. */
   resumePdf: string | null;
 } = {
@@ -25,6 +29,8 @@ export const profile: {
   email: "juliasolerpla@gmail.com",
   linkedin: "https://www.linkedin.com/in/j%C3%BAlia-soler-b9543a266/",
   photo: null,
+  photoInset: null,
+  photoResume: null,
   resumePdf: null,
 };
 

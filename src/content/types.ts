@@ -94,6 +94,8 @@ export type Dictionary = {
     intro: string;
     outro: string;
     photoAlt: string;
+    /** Alt text of the second photo, the one overlapping the portrait. */
+    insetAlt: string;
     linkedin: string;
     projects: string;
     resume: string;
@@ -118,6 +120,8 @@ export type Dictionary = {
     description: string;
     headline: string;
     summary: string;
+    /** Alt text of the photo next to the summary. */
+    photoAlt: string;
     download: string;
     sections: {
       education: string;

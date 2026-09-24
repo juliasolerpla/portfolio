@@ -26,6 +26,7 @@ export const ca: Dictionary = {
     outro:
       "Baixa per veure en què he estat treballant: des de mecanismes per a CubeSats fins a l’aviònica d’un coet.",
     photoAlt: "Retrat de la Júlia Soler",
+    insetAlt: "La Júlia Soler treballant",
     linkedin: "LinkedIn",
     projects: "Projectes",
     resume: "Currículum",
@@ -55,6 +56,7 @@ export const ca: Dictionary = {
     description:
       "Formació, experiència, projectes i competències de la Júlia Soler i Pla, enginyera aeroespacial i de telecomunicacions.",
     headline: "Màster en Enginyeria Aeroespacial — ISAE-SUPAERO",
+    photoAlt: "Foto de la Júlia Soler",
     summary:
       "Enginyera aeroespacial i de telecomunicacions amb doble titulació, actualment cursant un màster en Enginyeria de Sistemes Espacials a l’ISAE-SUPAERO. Cinc anys de formació universitària i de recerca de postgrau m’han donat una base tècnica àmplia que cobreix tot el cicle de vida de l’enginyeria —del disseny i la modelització al prototipatge, les proves i la validació—, juntament amb el rigor analític per afrontar problemes complexos. Metòdica i amb una passió genuïna per l’espai, amb una capacitat demostrada per complir objectius tant en entorns professionals com de recerca.",
     download: "Descarrega el PDF",

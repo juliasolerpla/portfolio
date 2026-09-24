@@ -1,5 +1,6 @@
 import { CubeSat, Rocket, Saturn } from "~/components/illustrations";
 import { LeafButton } from "~/components/leaf-button";
+import { PhotoFrame } from "~/components/photo-frame";
 import { Portrait } from "~/components/portrait";
 import { profile, type Dictionary } from "~/content";
 import type { Locale } from "~/i18n/config";
@@ -13,7 +14,23 @@ export function Hero({ locale, dict }: { locale: Locale; dict: Dictionary }) {
   return (
     <section className="container-page pt-4 pb-16 md:pt-10 md:pb-24">
       <div className="grid items-center gap-12 md:grid-cols-2 lg:gap-20">
-        <Portrait alt={dict.hero.photoAlt} />
+        <div className="relative">
+          <Portrait alt={dict.hero.photoAlt} />
+          {/* Second photo, overlapping the top-right corner of the portrait. This wrapper carries
+              the absolute positioning, so it never has to share a class list with PhotoFrame's own
+              `relative` (two position utilities on one element is a losing fight in Tailwind). */}
+          <div
+            className="absolute -top-5 -right-3 aspect-[4/5] w-[42%] max-w-[13rem] animate-rise sm:-right-5 md:-top-8 md:-right-7"
+            style={delay(700)}
+          >
+            <PhotoFrame
+              photo={profile.photoInset}
+              alt={dict.hero.insetAlt}
+              sizes="(min-width: 1024px) 13rem, (min-width: 768px) 11rem, 40vw"
+              className="size-full rounded-[1.25rem] ring-6 ring-white md:rounded-[1.5rem]"
+            />
+          </div>
+        </div>
 
         <div className="relative isolate px-2 text-center md:py-16">
           {/* Technical sketches floating behind the text, like in an engineering notebook. */}
