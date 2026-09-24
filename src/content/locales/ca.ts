@@ -41,7 +41,7 @@ export const ca: Dictionary = {
     stats: [
       { value: "3,9/4", label: "Nota mitjana (GPA) al màster de l’ISAE-SUPAERO" },
       { value: "10/10", label: "Qualificació del meu treball de final de grau" },
-      { value: "2", label: "Publicacions i presentacions" },
+      { value: "1", label: "Publicacions i presentacions" },
       { value: "4", label: "Idiomes: català, castellà, anglès i francès" },
     ],
   },
@@ -173,9 +173,6 @@ export const ca: Dictionary = {
       text: "F. Martin, J. Soler i Pla, N. André, «Plasma leakage through the magnetospheric boundaries of Jupiter and Saturn», pòster a MOP 2026 (Magnetospheres of the Outer Planets), Tolosa.",
       href: "/images/projects/plasma/poster.jpg",
     },
-    {
-      text: "A. Fernández-Acero Campoamor, E. Valverde Sacristán, Á. Yuste Pubill, G. Grande González, J. Soler i Pla, C. Xu, «Robust MPC-Based Collision Avoidance Guidance and Safe Duty-Cycled GNSS Navigation for LEO CubeSats», IEEE Aerospace Conference 2027 (en preparació).",
-    },
   ],
   projects: {
     "cubesat-hdrm": {
@@ -295,7 +292,6 @@ export const ca: Dictionary = {
         { value: "–69,8%", label: "Energia estalviada del receptor GNSS" },
         { value: "150 m", label: "Zona d’exclusió mai vulnerada" },
         { value: "~2 m/s", label: "Δv total per a l’evitació" },
-        { value: "2027", label: "Article a l’IEEE Aerospace Conference" },
       ],
       results: [
         {
@@ -309,8 +305,7 @@ export const ca: Dictionary = {
             "Esforç de control i Δv acumulat durant la maniobra d’evitació: uns 2 m/s en total.",
         },
       ],
-      outcome:
-        "Vam presentar aquest treball a la final del Student Aerospace Challenge, a París. Un article que el descriu, «Robust MPC-Based Collision Avoidance Guidance and Safe Duty-Cycled GNSS Navigation for LEO CubeSats» (Fernández-Acero Campoamor, Valverde Sacristán, Yuste Pubill, Grande González, Soler i Pla, Xu), està en preparació per a l’IEEE Aerospace Conference 2027.",
+      outcome: "Vam presentar aquest treball a la final del Student Aerospace Challenge, a París.",
     },
     "plasma-magnetospheres": {
       shortTitle: "Magnetosferes dels planetes gegants.",

@@ -41,7 +41,7 @@ export const en: Dictionary = {
     stats: [
       { value: "3.9/4", label: "GPA in my MSc at ISAE-SUPAERO" },
       { value: "10/10", label: "Grade for my bachelor’s thesis" },
-      { value: "2", label: "Publications & presentations" },
+      { value: "1", label: "Publications & presentations" },
       { value: "4", label: "Languages: Catalan, Spanish, English and French" },
     ],
   },
@@ -174,9 +174,6 @@ export const en: Dictionary = {
       text: "F. Martin, J. Soler i Pla, N. André, “Plasma leakage through the magnetospheric boundaries of Jupiter and Saturn”, poster at MOP 2026 (Magnetospheres of the Outer Planets), Toulouse.",
       href: "/images/projects/plasma/poster.jpg",
     },
-    {
-      text: "A. Fernández-Acero Campoamor, E. Valverde Sacristán, Á. Yuste Pubill, G. Grande González, J. Soler i Pla, C. Xu, “Robust MPC-Based Collision Avoidance Guidance and Safe Duty-Cycled GNSS Navigation for LEO CubeSats”, IEEE Aerospace Conference 2027 (in preparation).",
-    },
   ],
   projects: {
     "cubesat-hdrm": {
@@ -293,7 +290,6 @@ export const en: Dictionary = {
         { value: "–69.8%", label: "GNSS receiver energy saved" },
         { value: "150 m", label: "Keep-out zone never violated" },
         { value: "~2 m/s", label: "Total Δv for avoidance" },
-        { value: "2027", label: "IEEE Aerospace Conference paper" },
       ],
       results: [
         {
@@ -307,8 +303,7 @@ export const en: Dictionary = {
             "Control effort and accumulated Δv for the avoidance manoeuvre — about 2 m/s in total.",
         },
       ],
-      outcome:
-        "We presented this work at the Student Aerospace Challenge final in Paris. A paper describing it, “Robust MPC-Based Collision Avoidance Guidance and Safe Duty-Cycled GNSS Navigation for LEO CubeSats” (Fernández-Acero Campoamor, Valverde Sacristán, Yuste Pubill, Grande González, Soler i Pla, Xu), is in preparation for the IEEE Aerospace Conference 2027.",
+      outcome: "We presented this work at the Student Aerospace Challenge final in Paris.",
     },
     "plasma-magnetospheres": {
       shortTitle: "Giant-Planet Magnetospheres.",

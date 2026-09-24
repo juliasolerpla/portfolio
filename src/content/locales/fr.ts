@@ -42,7 +42,7 @@ export const fr: Dictionary = {
     stats: [
       { value: "3,9/4", label: "Moyenne (GPA) en MSc à l’ISAE-SUPAERO" },
       { value: "10/10", label: "Note de mon travail de fin d’études de bachelor" },
-      { value: "2", label: "Publications et présentations" },
+      { value: "1", label: "Publications et présentations" },
       { value: "4", label: "Langues : catalan, espagnol, anglais et français" },
     ],
   },
@@ -173,9 +173,6 @@ export const fr: Dictionary = {
     {
       text: "F. Martin, J. Soler i Pla, N. André, « Plasma leakage through the magnetospheric boundaries of Jupiter and Saturn », poster à MOP 2026 (Magnetospheres of the Outer Planets), Toulouse.",
       href: "/images/projects/plasma/poster.jpg",
-    },
-    {
-      text: "A. Fernández-Acero Campoamor, E. Valverde Sacristán, Á. Yuste Pubill, G. Grande González, J. Soler i Pla, C. Xu, « Robust MPC-Based Collision Avoidance Guidance and Safe Duty-Cycled GNSS Navigation for LEO CubeSats », IEEE Aerospace Conference 2027 (en préparation).",
     },
   ],
   projects: {
@@ -309,7 +306,6 @@ export const fr: Dictionary = {
         { value: "–69,8 %", label: "Énergie du récepteur GNSS économisée" },
         { value: "150 m", label: "Zone d’exclusion jamais violée" },
         { value: "~2 m/s", label: "Δv total pour l’évitement" },
-        { value: "2027", label: "Article à l’IEEE Aerospace Conference" },
       ],
       results: [
         {
@@ -324,7 +320,7 @@ export const fr: Dictionary = {
         },
       ],
       outcome:
-        "Nous avons présenté ce travail à la finale du Student Aerospace Challenge, à Paris. Un article qui le décrit, « Robust MPC-Based Collision Avoidance Guidance and Safe Duty-Cycled GNSS Navigation for LEO CubeSats » (Fernández-Acero Campoamor, Valverde Sacristán, Á. Yuste Pubill, Grande González, Soler i Pla, Xu), est en préparation pour l’IEEE Aerospace Conference 2027.",
+        "Nous avons présenté ce travail à la finale du Student Aerospace Challenge, à Paris.",
     },
     "plasma-magnetospheres": {
       shortTitle: "Magnétosphères des planètes géantes.",
