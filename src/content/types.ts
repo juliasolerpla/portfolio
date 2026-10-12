@@ -84,6 +84,8 @@ export type ProjectCopy = {
   summary: string;
   /** Two paragraphs: `[0]` is "The problem", the rest is "What I did". */
   body: string[];
+  /** Replaces the "What I did" heading, e.g. "What we did" for team work. */
+  approachHeading?: string;
   /** Extra headed sections shown between "The problem" and "What I did" (background, context). */
   sections?: { heading: string; paragraphs: string[] }[];
   /** Paragraphs shown under the Results heading, before the figures (findings, next steps). */
@@ -94,7 +96,7 @@ export type ProjectCopy = {
   tags: string[];
   /** Alt text of the cover illustration or hero photo. */
   coverAlt: string;
-  /** A short row of 3–4 headline figures, shown right under the hero image. */
+  /** A short row of 3–4 headline figures, shown right under the hero image. Empty hides the row. */
   stats: { value: string; label: string }[];
   /** Caption under `ProjectEntry.designImages`, when set. */
   designCaption?: string;

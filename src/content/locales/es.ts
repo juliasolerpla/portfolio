@@ -281,9 +281,10 @@ export const es: Dictionary = {
       role: "Desarrollo del sistema GNC (WP7)",
       summary:
         "Un sistema de navegación y guiado que mantiene un CubeSat a salvo de basura espacial en órbita terrestre baja, encendiendo el receptor GNSS solo cuando hace falta, para ahorrar energía.",
+      approachHeading: "Qué hicimos",
       body: [
-        "La órbita terrestre baja está cada vez más congestionada, y los satélites necesitan cada vez más evitar basura espacial por su cuenta. Eso requiere una buena estimación de la posición, pero mantener el receptor GNSS siempre encendido consume una parte importante del presupuesto energético de un CubeSat. En el marco del Student Aerospace Challenge trabajé en el guiado, la navegación y el control (GNC) de una misión de este tipo (paquete de trabajo 7).",
-        "Desarrollé un sistema de navegación integrado en el que un filtro de Kalman unscented (UKF) combina lecturas GNSS, tomadas solo cuando hace falta, con sensores auxiliares, mientras un supervisor decide cuándo encender el receptor. Sobre esa base, construí un controlador predictivo basado en modelo (MPC) que planifica maniobras de evitación en un horizonte móvil y amplía la zona de exclusión alrededor de la basura a medida que crece la incertidumbre de navegación prevista. Validé todo el lazo en MATLAB/Simulink frente a perfiles reales de error GNSS del Sentinel-6A, en un equipo de seis personas.",
+        "La órbita terrestre baja está cada vez más congestionada, y los satélites necesitan cada vez más evitar basura espacial por su cuenta. Eso requiere una buena estimación de la posición, pero mantener el receptor GNSS siempre encendido consume una parte importante del presupuesto energético de un CubeSat. En el marco del Student Aerospace Challenge trabajamos en el guiado, la navegación y el control (GNC) de una misión de este tipo (paquete de trabajo 7).",
+        "Desarrollamos un sistema de navegación integrado en el que un filtro de Kalman unscented (UKF) combina lecturas GNSS, tomadas solo cuando hace falta, con sensores auxiliares, mientras un supervisor decide cuándo encender el receptor. Sobre esa base, construimos un controlador predictivo basado en modelo (MPC) que planifica maniobras de evitación en un horizonte móvil y amplía la zona de exclusión alrededor de la basura a medida que crece la incertidumbre de navegación prevista. Validamos todo el lazo en MATLAB/Simulink frente a perfiles reales de error GNSS del Sentinel-6A.",
       ],
       highlights: [
         "Filtro de Kalman unscented que combina un GNSS de uso intermitente con sensores auxiliares",
@@ -304,17 +305,7 @@ export const es: Dictionary = {
       ],
       coverAlt:
         "Dibujo lineal de una nave de servicio que se aproxima a un satélite en órbita terrestre baja",
-      stats: [
-        { value: "–69,8%", label: "Energía ahorrada del receptor GNSS" },
-        { value: "150 m", label: "Zona de exclusión nunca vulnerada" },
-        { value: "~2 m/s", label: "Δv total para la evitación" },
-      ],
-      results: [
-        {
-          alt: "Diagrama de la arquitectura de navegación y guiado integrada",
-          caption: "Arquitectura integrada de navegación y guiado.",
-        },
-      ],
+      stats: [],
       outcomeFigures: [
         { alt: "Parte del equipo del proyecto delante de un avión", caption: "El equipo." },
         {
@@ -332,6 +323,7 @@ export const es: Dictionary = {
       kind: "Proyecto de investigación de máster",
       summary:
         "¿Se escapa el plasma del interior de la magnetosfera de Júpiter a través de sus fronteras? Un proyecto de investigación con datos de la sonda Juno.",
+      approachHeading: "Qué hicimos",
       body: [
         "Júpiter tiene la magnetosfera más grande del sistema solar y, a diferencia de la de la Tierra, buena parte de su plasma procede de su interior. Este plasma interno es transportado hacia las fronteras de la magnetosfera. Nuestro proyecto investiga si este plasma se escapa realmente a través de la magnetopausa, buscando iones pesados de origen interno fuera de la magnetosfera: en la magnetofunda y en el viento solar.",
         "Combinamos datos del magnetómetro de Juno (FGM) y de composición iónica (JADE-I) con catálogos de cruces del choque de proa y de la magnetopausa. Los eventos de compresión del viento solar empujan la magnetopausa hacia dentro, así que son los mejores momentos para encontrar a Juno justo fuera de la frontera. Hemos construido una tubería que propaga el viento solar hasta Júpiter, detecta eventos de compresión y los clasifica según la posición de Juno. La hemos validado con el catálogo de Louis et al. (2023). Los espectrogramas de tiempo de vuelo muestran después si hay iones pesados a cada lado de la frontera.",

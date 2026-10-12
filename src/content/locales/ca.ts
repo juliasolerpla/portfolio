@@ -279,9 +279,10 @@ export const ca: Dictionary = {
       role: "Desenvolupament del sistema GNC (WP7)",
       summary:
         "Un sistema de navegació i guiatge que manté un CubeSat lluny de deixalles espacials en òrbita terrestre baixa, encenent el receptor GNSS només quan cal, per estalviar energia.",
+      approachHeading: "Què vam fer",
       body: [
-        "L’òrbita terrestre baixa cada cop té més trànsit, i els satèl·lits han de saber evitar deixalles espacials pel seu compte. Això requereix una bona estimació de la posició, però mantenir el receptor GNSS sempre engegat consumeix una part important del pressupost energètic d’un CubeSat. En el marc del Student Aerospace Challenge, vaig treballar en el guiatge, la navegació i el control (GNC) d’una missió d’aquest tipus (paquet de treball 7).",
-        "Vaig desenvolupar un sistema de navegació integrat en què un filtre de Kalman unscented (UKF) combina lectures GNSS, preses només quan cal, amb sensors auxiliars, mentre un supervisor decideix quan encendre el receptor. A sobre, vaig construir un controlador predictiu basat en model (MPC) que planifica maniobres d’evitació en un horitzó mòbil i eixampla la zona d’exclusió al voltant de la deixalla a mesura que creix la incertesa de navegació prevista. Vaig validar tot el llaç amb MATLAB/Simulink contra perfils reals d’error GNSS del Sentinel-6A, en un equip de sis persones.",
+        "L’òrbita terrestre baixa cada cop té més trànsit, i els satèl·lits han de saber evitar deixalles espacials pel seu compte. Això requereix una bona estimació de la posició, però mantenir el receptor GNSS sempre engegat consumeix una part important del pressupost energètic d’un CubeSat. En el marc del Student Aerospace Challenge, vam treballar en el guiatge, la navegació i el control (GNC) d’una missió d’aquest tipus (paquet de treball 7).",
+        "Vam desenvolupar un sistema de navegació integrat en què un filtre de Kalman unscented (UKF) combina lectures GNSS, preses només quan cal, amb sensors auxiliars, mentre un supervisor decideix quan encendre el receptor. A sobre, vam construir un controlador predictiu basat en model (MPC) que planifica maniobres d’evitació en un horitzó mòbil i eixampla la zona d’exclusió al voltant de la deixalla a mesura que creix la incertesa de navegació prevista. Vam validar tot el llaç amb MATLAB/Simulink contra perfils reals d’error GNSS del Sentinel-6A.",
       ],
       highlights: [
         "Filtre de Kalman unscented que combina un GNSS d’ús intermitent amb sensors auxiliars",
@@ -302,17 +303,7 @@ export const ca: Dictionary = {
       ],
       coverAlt:
         "Dibuix lineal d’una nau de servei que s’aproxima a un satèl·lit en òrbita terrestre baixa",
-      stats: [
-        { value: "–69,8%", label: "Energia estalviada del receptor GNSS" },
-        { value: "150 m", label: "Zona d’exclusió mai vulnerada" },
-        { value: "~2 m/s", label: "Δv total per a l’evitació" },
-      ],
-      results: [
-        {
-          alt: "Diagrama de l’arquitectura de navegació i guiatge integrada",
-          caption: "Arquitectura integrada de navegació i guiatge.",
-        },
-      ],
+      stats: [],
       outcomeFigures: [
         { alt: "Part de l’equip del projecte davant d’un avió", caption: "L’equip." },
         {
@@ -330,6 +321,7 @@ export const ca: Dictionary = {
       kind: "Projecte de recerca de màster",
       summary:
         "S’escapa el plasma de l’interior de la magnetosfera de Júpiter a través de les seves fronteres? Un projecte de recerca amb dades de la sonda Juno.",
+      approachHeading: "Què vam fer",
       body: [
         "Júpiter té la magnetosfera més gran del sistema solar i, a diferència de la de la Terra, gran part del seu plasma prové de l’interior. Aquest plasma intern és transportat cap a les fronteres de la magnetosfera. El nostre projecte investiga si aquest plasma s’escapa realment a través de la magnetopausa, buscant ions pesants d’origen intern fora de la magnetosfera: a la magnetofunda i al vent solar.",
         "Combinem dades del magnetòmetre de Juno (FGM) i de composició iònica (JADE-I) amb catàlegs de creuaments de l’ona de xoc i de la magnetopausa. Els esdeveniments de compressió del vent solar empenyen la magnetopausa cap a dins, així que són els millors moments per trobar Juno just fora de la frontera. Hem construït una canonada que propaga el vent solar fins a Júpiter, detecta esdeveniments de compressió i els classifica segons la posició de Juno. L’hem validada amb el catàleg de Louis et al. (2023). Els espectrogrames de temps de vol mostren després si hi ha ions pesants a cada costat de la frontera.",

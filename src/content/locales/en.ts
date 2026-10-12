@@ -277,9 +277,10 @@ export const en: Dictionary = {
       role: "GNC system development (WP7)",
       summary:
         "A navigation and guidance system that keeps a CubeSat safely clear of debris in low Earth orbit while switching its GNSS receiver on only when needed, to save power.",
+      approachHeading: "What we did",
       body: [
-        "Low Earth orbit is getting crowded, and satellites increasingly need to avoid debris on their own. That takes an accurate position estimate, but running a GNSS receiver continuously uses a large share of a CubeSat’s power budget. Within the Student Aerospace Challenge, I worked on the guidance, navigation and control (GNC) of such a mission (work package 7).",
-        "I developed an integrated navigation system in which an Unscented Kalman Filter fuses GNSS readings, taken only when needed, with auxiliary sensors, while a supervisor decides when to switch the receiver on. On top of it, I built a Model Predictive Controller that plans avoidance manoeuvres over a rolling horizon and widens the keep-out zone around the debris as the predicted navigation uncertainty grows. I validated the full loop in MATLAB/Simulink against real GNSS error profiles from Sentinel-6A, as part of a six-person team.",
+        "Low Earth orbit is getting crowded, and satellites increasingly need to avoid debris on their own. That takes an accurate position estimate, but running a GNSS receiver continuously uses a large share of a CubeSat’s power budget. Within the Student Aerospace Challenge, we worked on the guidance, navigation and control (GNC) of such a mission (work package 7).",
+        "We developed an integrated navigation system in which an Unscented Kalman Filter fuses GNSS readings, taken only when needed, with auxiliary sensors, while a supervisor decides when to switch the receiver on. On top of it, we built a Model Predictive Controller that plans avoidance manoeuvres over a rolling horizon and widens the keep-out zone around the debris as the predicted navigation uncertainty grows. We validated the full loop in MATLAB/Simulink against real GNSS error profiles from Sentinel-6A.",
       ],
       highlights: [
         "Unscented Kalman Filter fusing duty-cycled GNSS with auxiliary sensors",
@@ -299,17 +300,7 @@ export const en: Dictionary = {
         "Collision avoidance",
       ],
       coverAlt: "Line drawing of a servicing spacecraft approaching a satellite in low Earth orbit",
-      stats: [
-        { value: "–69.8%", label: "GNSS receiver energy saved" },
-        { value: "150 m", label: "Keep-out zone never violated" },
-        { value: "~2 m/s", label: "Total Δv for avoidance" },
-      ],
-      results: [
-        {
-          alt: "Diagram of the integrated navigation and guidance architecture",
-          caption: "Integrated navigation and guidance architecture.",
-        },
-      ],
+      stats: [],
       outcomeFigures: [
         { alt: "Part of the project team standing in front of an aircraft", caption: "The team." },
         {
@@ -326,6 +317,7 @@ export const en: Dictionary = {
       kind: "MSc Research Project",
       summary:
         "Does plasma from inside Jupiter’s magnetosphere leak out across its boundaries? A research project using Juno spacecraft data.",
+      approachHeading: "What we did",
       body: [
         "Jupiter has the largest magnetosphere in the Solar System, and unlike Earth’s, much of its plasma comes from inside it. This internal plasma is carried outward toward the magnetospheric boundaries. Our project investigates whether this plasma actually leaks across the magnetopause, by looking for heavy ions of internal origin outside the magnetosphere: in the magnetosheath and in the solar wind.",
         "We combine Juno magnetometer (FGM) data and JADE-I ion composition data with catalogues of bow-shock and magnetopause crossings. Solar-wind compression events push the magnetopause inward, so they are the best moments to catch Juno just outside the boundary. We built a pipeline that propagates the solar wind out to Jupiter, detects compression events, and ranks them by Juno’s position. We validated it against the Louis et al. (2023) catalogue. Time-of-flight spectrograms then show whether heavy ions are present on each side of the boundary.",

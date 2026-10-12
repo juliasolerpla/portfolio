@@ -293,9 +293,10 @@ export const fr: Dictionary = {
       role: "Développement du système GNC (WP7)",
       summary:
         "Un système de navigation et de guidage qui maintient un CubeSat à l’écart des débris en orbite basse, en n’allumant le récepteur GNSS qu’en cas de besoin, pour économiser l’énergie.",
+      approachHeading: "Ce que nous avons fait",
       body: [
-        "L’orbite terrestre basse est de plus en plus encombrée, et les satellites doivent de plus en plus éviter les débris par eux-mêmes. Cela demande une bonne estimation de la position, mais faire fonctionner un récepteur GNSS en continu consomme une part importante du budget énergétique d’un CubeSat. Dans le cadre du Student Aerospace Challenge, j’ai travaillé sur le guidage, la navigation et le contrôle (GNC) d’une telle mission (lot de travail 7).",
-        "J’ai développé un système de navigation intégré dans lequel un filtre de Kalman unscented (UKF) fusionne des mesures GNSS, prises seulement en cas de besoin, avec des capteurs auxiliaires, pendant qu’un superviseur décide quand allumer le récepteur. Par-dessus, j’ai construit un contrôleur prédictif (MPC) qui planifie les manœuvres d’évitement sur un horizon glissant et élargit la zone d’exclusion autour du débris à mesure que l’incertitude de navigation prévue augmente. J’ai validé toute la boucle sous MATLAB/Simulink face à des profils d’erreur GNSS réels de Sentinel-6A, au sein d’une équipe de six personnes.",
+        "L’orbite terrestre basse est de plus en plus encombrée, et les satellites doivent de plus en plus éviter les débris par eux-mêmes. Cela demande une bonne estimation de la position, mais faire fonctionner un récepteur GNSS en continu consomme une part importante du budget énergétique d’un CubeSat. Dans le cadre du Student Aerospace Challenge, nous avons travaillé sur le guidage, la navigation et le contrôle (GNC) d’une telle mission (lot de travail 7).",
+        "Nous avons développé un système de navigation intégré dans lequel un filtre de Kalman unscented (UKF) fusionne des mesures GNSS, prises seulement en cas de besoin, avec des capteurs auxiliaires, pendant qu’un superviseur décide quand allumer le récepteur. Par-dessus, nous avons construit un contrôleur prédictif (MPC) qui planifie les manœuvres d’évitement sur un horizon glissant et élargit la zone d’exclusion autour du débris à mesure que l’incertitude de navigation prévue augmente. Nous avons validé toute la boucle sous MATLAB/Simulink face à des profils d’erreur GNSS réels de Sentinel-6A.",
       ],
       highlights: [
         "Filtre de Kalman unscented fusionnant un GNSS à cycle d’utilisation réduit avec des capteurs auxiliaires",
@@ -316,17 +317,7 @@ export const fr: Dictionary = {
       ],
       coverAlt:
         "Dessin au trait d’un véhicule de service s’approchant d’un satellite en orbite terrestre basse",
-      stats: [
-        { value: "–69,8 %", label: "Énergie du récepteur GNSS économisée" },
-        { value: "150 m", label: "Zone d’exclusion jamais violée" },
-        { value: "~2 m/s", label: "Δv total pour l’évitement" },
-      ],
-      results: [
-        {
-          alt: "Schéma de l’architecture de navigation et de guidage intégrée",
-          caption: "Architecture intégrée de navigation et de guidage.",
-        },
-      ],
+      stats: [],
       outcomeFigures: [
         { alt: "Une partie de l’équipe du projet devant un avion", caption: "L’équipe." },
         {
@@ -345,6 +336,7 @@ export const fr: Dictionary = {
       kind: "Projet de recherche de MSc",
       summary:
         "Le plasma de l’intérieur de la magnétosphère de Jupiter s’échappe-t-il à travers ses frontières ? Un projet de recherche à partir des données de la sonde Juno.",
+      approachHeading: "Ce que nous avons fait",
       body: [
         "Jupiter possède la plus grande magnétosphère du Système solaire et, contrairement à celle de la Terre, une grande partie de son plasma vient de l’intérieur. Ce plasma interne est transporté vers les frontières de la magnétosphère. Notre projet cherche à savoir si ce plasma s’échappe réellement à travers la magnétopause, en recherchant des ions lourds d’origine interne hors de la magnétosphère : dans la magnétogaine et dans le vent solaire.",
         "Nous combinons les données du magnétomètre de Juno (FGM) et de composition ionique (JADE-I) avec des catalogues de franchissements du choc et de la magnétopause. Les événements de compression du vent solaire repoussent la magnétopause vers l’intérieur : ce sont les meilleurs moments pour trouver Juno juste à l’extérieur de la frontière. Nous avons construit une chaîne de traitement qui propage le vent solaire jusqu’à Jupiter, détecte les événements de compression et les classe selon la position de Juno. Nous l’avons validée avec le catalogue de Louis et al. (2023). Des spectrogrammes en temps de vol montrent ensuite si des ions lourds sont présents de chaque côté de la frontière.",

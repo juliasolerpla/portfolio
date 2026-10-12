@@ -101,19 +101,23 @@ export default async function ProjectPage({ params }: PageProps<"/[locale]/proje
           </header>
 
           {/* Key numbers, right under the header — the same idea as "At a glance" on the home page. */}
-          <dl className="mt-10 grid max-w-4xl grid-cols-2 gap-x-8 gap-y-8 sm:grid-cols-4">
-            {copy.stats.map((stat, i) => (
-              <div
-                key={stat.label}
-                data-reveal
-                style={revealDelay(i * 90)}
-                className="flex flex-col-reverse border-t-2 border-ink pt-4"
-              >
-                <dt className="mt-2 text-sm leading-snug text-muted">{stat.label}</dt>
-                <dd className="text-3xl font-bold tracking-[-0.02em] md:text-4xl">{stat.value}</dd>
-              </div>
-            ))}
-          </dl>
+          {copy.stats.length > 0 && (
+            <dl className="mt-10 grid max-w-4xl grid-cols-2 gap-x-8 gap-y-8 sm:grid-cols-4">
+              {copy.stats.map((stat, i) => (
+                <div
+                  key={stat.label}
+                  data-reveal
+                  style={revealDelay(i * 90)}
+                  className="flex flex-col-reverse border-t-2 border-ink pt-4"
+                >
+                  <dt className="mt-2 text-sm leading-snug text-muted">{stat.label}</dt>
+                  <dd className="text-3xl font-bold tracking-[-0.02em] md:text-4xl">
+                    {stat.value}
+                  </dd>
+                </div>
+              ))}
+            </dl>
+          )}
 
           <div className="mt-14 grid gap-14 lg:grid-cols-[minmax(0,1fr)_18rem] lg:gap-20">
             <div className="max-w-3xl">
@@ -136,7 +140,9 @@ export default async function ProjectPage({ params }: PageProps<"/[locale]/proje
                 </div>
               ))}
 
-              <h2 className="mt-10 text-2xl font-bold">{dict.project.approach}</h2>
+              <h2 className="mt-10 text-2xl font-bold">
+                {copy.approachHeading ?? dict.project.approach}
+              </h2>
               {copy.body.slice(1).map((paragraph) => (
                 <p key={paragraph} className="mt-4 text-[1.0625rem] leading-relaxed text-ink/85">
                   {paragraph}
