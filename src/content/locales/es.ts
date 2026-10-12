@@ -328,19 +328,32 @@ export const es: Dictionary = {
     "plasma-magnetospheres": {
       shortTitle: "Magnetosferas de planetas gigantes.",
       title:
-        "Fuga de plasma a través de la frontera magnetosférica de Júpiter (y, después, Saturno)",
+        "Investigación de la fuga de plasma a través de las fronteras magnetosféricas de Júpiter y Saturno",
       kind: "Proyecto de investigación de máster",
       summary:
-        "¿Cómo escapa el plasma de la magnetosfera de Júpiter? Un proyecto de investigación basado en datos multiinstrumento de Juno, que ahora se amplía a Saturno.",
+        "¿Se escapa el plasma del interior de la magnetosfera de Júpiter a través de sus fronteras? Un proyecto de investigación con datos de la sonda Juno.",
       body: [
-        "Júpiter está envuelto en la magnetosfera más grande del sistema solar, una región dominada por su propio campo magnético y protegida del viento solar. Su luna volcánica Ío vierte en ella iones pesados como el oxígeno y el azufre. ¿Se escapa este plasma a través de la magnetopausa hacia la magnetofunda, y cuándo?",
-        "Combino datos del magnetómetro de Juno (FGM) y de composición iónica (JADE-I) con catálogos de cruces del choque de proa y la magnetopausa. He construido una tubería que propaga el viento solar hasta Júpiter, detecta eventos de compresión y los clasifica según dónde estaba Juno, validada frente a un catálogo de cruces publicado. Los espectrogramas de tiempo de vuelo muestran después qué iones hay a cada lado de la frontera.",
+        "Júpiter tiene la magnetosfera más grande del sistema solar y, a diferencia de la de la Tierra, buena parte de su plasma procede de su interior. Este plasma interno es transportado hacia las fronteras de la magnetosfera. Nuestro proyecto investiga si este plasma se escapa realmente a través de la magnetopausa, buscando iones pesados de origen interno fuera de la magnetosfera: en la magnetofunda y en el viento solar.",
+        "Combinamos datos del magnetómetro de Juno (FGM) y de composición iónica (JADE-I) con catálogos de cruces del choque de proa y de la magnetopausa. Los eventos de compresión del viento solar empujan la magnetopausa hacia dentro, así que son los mejores momentos para encontrar a Juno justo fuera de la frontera. Hemos construido una tubería que propaga el viento solar hasta Júpiter, detecta eventos de compresión y los clasifica según la posición de Juno. La hemos validado con el catálogo de Louis et al. (2023). Los espectrogramas de tiempo de vuelo muestran después si hay iones pesados a cada lado de la frontera.",
+      ],
+      sections: [
+        {
+          heading: "Una fuente interna de plasma: Ío",
+          paragraphs: [
+            "Ío, la luna volcánicamente activa de Júpiter, es la principal fuente interna de plasma. Su atmósfera de dióxido de azufre pierde más de una tonelada de gas por segundo. Una vez ionizado, este gas forma un toro de plasma que sigue la órbita de Ío y corrota con la rotación de Júpiter, de 10 horas. El toro contiene unas 2 megatoneladas de iones mayoritariamente S⁺ y O⁺. La rápida rotación de Júpiter empuja después este plasma pesado hacia el exterior, mediante un intercambio de tubos de flujo impulsado por fuerzas centrífugas.",
+            "Como los iones de azufre y de oxígeno proceden sobre todo de Ío y son escasos en el viento solar, funcionan como trazador. Si los encontramos fuera de la magnetopausa, es una prueba de que el plasma se ha escapado.",
+          ],
+        },
+      ],
+      resultsIntro: [
+        "En la mayoría de los eventos de compresión no encontramos iones pesados fuera de la magnetosfera, así que una compresión por sí sola no implica fuga. En la compresión extrema de octubre de 2024, sin embargo, aparecen iones pesados en la magnetofunda el día 294 (21 de octubre), entre las 19:00 y las 19:20: un intervalo candidato de fuga.",
+        "Próximos pasos: añadir datos de partículas energéticas de JEDI y extender el estudio a Saturno con datos de Cassini. La fuente interna de Saturno es la luna Encélado.",
       ],
       highlights: [
-        "Combinación de datos del magnetómetro (FGM) y de composición iónica (JADE-I) de Juno con catálogos de cruces",
-        "Tubería construida y validada que detecta y clasifica eventos de compresión del viento solar",
-        "Análisis de composición por tiempo de vuelo a través de la magnetopausa",
-        "Identificación de un evento candidato de fuga de iones pesados en octubre de 2024",
+        "Combinación de datos del magnetómetro (FGM) y de composición iónica (JADE-I) de Juno con catálogos de cruces del choque de proa y de la magnetopausa",
+        "Tubería construida que detecta y clasifica eventos de compresión del viento solar, validada con Louis et al. (2023)",
+        "Iones pesados de azufre y oxígeno, de origen Ío, como trazador de la fuga",
+        "Intervalo candidato de fuga identificado el 21 de octubre de 2024, entre las 19:00 y las 19:20",
       ],
       resumeBullets: [
         "Construcción de una tubería con datos FGM y JADE-I de Juno que cataloga y clasifica eventos de compresión del viento solar en Júpiter, validada frente a un catálogo de cruces publicado.",
@@ -369,21 +382,20 @@ export const es: Dictionary = {
         },
         {
           alt: "Mapa de los eventos de compresión previstos alrededor de Júpiter, por prioridad",
-          caption:
-            "Eventos de compresión previstos alrededor de Júpiter, clasificados por prioridad de análisis.",
+          caption: "Eventos de compresión previstos, codificados por colores según la prioridad.",
         },
         {
           alt: "Espectrograma de tiempo de vuelo que muestra iones pesados en la magnetofunda",
           caption:
-            "Espectrograma de tiempo de vuelo del evento de octubre de 2024: se ven iones pesados en la magnetofunda, un indicio de fuga.",
+            "Espectrograma de tiempo de vuelo del evento de octubre de 2024: se ven poblaciones de iones pesados.",
         },
       ],
       outcome:
-        "Presentamos este trabajo como póster en MOP 2026 (Magnetospheres of the Outer Planets), en Toulouse, con Fiona Martin, bajo la supervisión de Nicolas André (IRAP). Próximos pasos: ampliar el análisis al instrumento JEDI y, en Saturno, a datos de Cassini.",
+        "Presentamos este trabajo como póster en MOP 2026, la conferencia Magnetospheres of the Outer Planets, en Toulouse, del 26 al 31 de julio de 2026.",
       outcomeFigures: [
         {
           alt: "Dos personas junto al póster en MOP 2026",
-          caption: "Con Fiona Martin en MOP 2026, Toulouse.",
+          caption: "Con Fiona Martin en MOP 2026. Supervisor: prof. Nicolas André (IRAP).",
         },
         {
           alt: "Póster: Plasma leakage through the magnetospheric boundaries of Jupiter and Saturn, presentado en MOP 2026",

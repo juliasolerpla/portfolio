@@ -122,6 +122,20 @@ export default async function ProjectPage({ params }: PageProps<"/[locale]/proje
               <h2 className="mt-10 text-2xl font-bold">{dict.project.problem}</h2>
               <p className="mt-4 text-[1.0625rem] leading-relaxed text-ink/85">{copy.body[0]}</p>
 
+              {copy.sections?.map((section) => (
+                <div key={section.heading}>
+                  <h2 className="mt-10 text-2xl font-bold">{section.heading}</h2>
+                  {section.paragraphs.map((paragraph) => (
+                    <p
+                      key={paragraph}
+                      className="mt-4 text-[1.0625rem] leading-relaxed text-ink/85"
+                    >
+                      {paragraph}
+                    </p>
+                  ))}
+                </div>
+              ))}
+
               <h2 className="mt-10 text-2xl font-bold">{dict.project.approach}</h2>
               {copy.body.slice(1).map((paragraph) => (
                 <p key={paragraph} className="mt-4 text-[1.0625rem] leading-relaxed text-ink/85">
@@ -170,6 +184,14 @@ export default async function ProjectPage({ params }: PageProps<"/[locale]/proje
               {copy.results && project.resultImages && (
                 <div className="mt-14">
                   <h2 className="text-2xl font-bold">{dict.project.results}</h2>
+                  {copy.resultsIntro?.map((paragraph) => (
+                    <p
+                      key={paragraph}
+                      className="mt-4 text-[1.0625rem] leading-relaxed text-ink/85"
+                    >
+                      {paragraph}
+                    </p>
+                  ))}
                   <div className="mt-6 grid gap-8 sm:grid-cols-2">
                     {project.resultImages.map((src, i) => {
                       const result = copy.results![i];

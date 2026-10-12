@@ -84,6 +84,10 @@ export type ProjectCopy = {
   summary: string;
   /** Two paragraphs: `[0]` is "The problem", the rest is "What I did". */
   body: string[];
+  /** Extra headed sections shown between "The problem" and "What I did" (background, context). */
+  sections?: { heading: string; paragraphs: string[] }[];
+  /** Paragraphs shown under the Results heading, before the figures (findings, next steps). */
+  resultsIntro?: string[];
   highlights: string[];
   /** Bullet points as they appear on the resume. */
   resumeBullets: string[];

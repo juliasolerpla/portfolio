@@ -341,19 +341,32 @@ export const fr: Dictionary = {
     "plasma-magnetospheres": {
       shortTitle: "Magnétosphères des planètes géantes.",
       title:
-        "Fuite de plasma à travers la frontière magnétosphérique de Jupiter (et, ensuite, Saturne)",
+        "Étude de la fuite de plasma à travers les frontières magnétosphériques de Jupiter et Saturne",
       kind: "Projet de recherche de MSc",
       summary:
-        "Comment le plasma s’échappe-t-il de la magnétosphère de Jupiter ? Un projet de recherche fondé sur des données multi-instruments de Juno, qui s’étend maintenant à Saturne.",
+        "Le plasma de l’intérieur de la magnétosphère de Jupiter s’échappe-t-il à travers ses frontières ? Un projet de recherche à partir des données de la sonde Juno.",
       body: [
-        "Jupiter est entourée de la plus grande magnétosphère du Système solaire, une région dominée par son propre champ magnétique et protégée du vent solaire. Sa lune volcanique Io y déverse des ions lourds comme l’oxygène et le soufre. Ce plasma s’échappe-t-il à travers la magnétopause vers la magnétogaine, et quand ?",
-        "Je combine les données du magnétomètre de Juno (FGM) et de composition ionique (JADE-I) avec des catalogues de franchissements du choc et de la magnétopause. J’ai construit une chaîne de traitement qui propage le vent solaire jusqu’à Jupiter, détecte les événements de compression et les classe selon la position de Juno, validée face à un catalogue de franchissements publié. Des spectrogrammes en temps de vol montrent ensuite quels ions sont présents de chaque côté de la frontière.",
+        "Jupiter possède la plus grande magnétosphère du Système solaire et, contrairement à celle de la Terre, une grande partie de son plasma vient de l’intérieur. Ce plasma interne est transporté vers les frontières de la magnétosphère. Notre projet cherche à savoir si ce plasma s’échappe réellement à travers la magnétopause, en recherchant des ions lourds d’origine interne hors de la magnétosphère : dans la magnétogaine et dans le vent solaire.",
+        "Nous combinons les données du magnétomètre de Juno (FGM) et de composition ionique (JADE-I) avec des catalogues de franchissements du choc et de la magnétopause. Les événements de compression du vent solaire repoussent la magnétopause vers l’intérieur : ce sont les meilleurs moments pour trouver Juno juste à l’extérieur de la frontière. Nous avons construit une chaîne de traitement qui propage le vent solaire jusqu’à Jupiter, détecte les événements de compression et les classe selon la position de Juno. Nous l’avons validée avec le catalogue de Louis et al. (2023). Des spectrogrammes en temps de vol montrent ensuite si des ions lourds sont présents de chaque côté de la frontière.",
+      ],
+      sections: [
+        {
+          heading: "Une source interne de plasma : Io",
+          paragraphs: [
+            "Io, la lune volcaniquement active de Jupiter, est la principale source interne de plasma. Son atmosphère de dioxyde de soufre perd plus d’une tonne de gaz par seconde. Une fois ionisé, ce gaz forme un tore de plasma qui suit l’orbite d’Io et corote avec la rotation de Jupiter, de 10 heures. Le tore contient environ 2 mégatonnes d’ions majoritairement S⁺ et O⁺. La rotation rapide de Jupiter pousse ensuite ce plasma lourd vers l’extérieur, par un échange de tubes de flux entraîné par les forces centrifuges.",
+            "Comme les ions de soufre et d’oxygène viennent surtout d’Io et sont rares dans le vent solaire, ils servent de traceur. Si on les retrouve hors de la magnétopause, c’est la preuve que le plasma s’est échappé.",
+          ],
+        },
+      ],
+      resultsIntro: [
+        "Dans la plupart des événements de compression, nous n’avons trouvé aucun ion lourd hors de la magnétosphère : une compression seule n’implique donc pas de fuite. Lors de la compression extrême d’octobre 2024, en revanche, des ions lourds apparaissent dans la magnétogaine le jour 294 (21 octobre), entre 19 h 00 et 19 h 20 : un intervalle candidat de fuite.",
+        "Prochaines étapes : ajouter les données de particules énergétiques de JEDI et étendre l’étude à Saturne avec les données de Cassini. La source interne de Saturne est la lune Encelade.",
       ],
       highlights: [
-        "Combinaison des données du magnétomètre (FGM) et de composition ionique (JADE-I) de Juno avec des catalogues de franchissements",
-        "Chaîne de traitement construite et validée qui détecte et classe les événements de compression du vent solaire",
-        "Analyse de composition en temps de vol à travers la magnétopause",
-        "Événement candidat de fuite d’ions lourds identifié en octobre 2024",
+        "Combinaison des données du magnétomètre (FGM) et de composition ionique (JADE-I) de Juno avec des catalogues de franchissements du choc et de la magnétopause",
+        "Chaîne de traitement construite qui détecte et classe les événements de compression du vent solaire, validée avec Louis et al. (2023)",
+        "Ions lourds de soufre et d’oxygène, d’origine Io, comme traceur de la fuite",
+        "Intervalle candidat de fuite identifié le 21 octobre 2024, entre 19 h 00 et 19 h 20",
       ],
       resumeBullets: [
         "Construction d’une chaîne de traitement sur données FGM et JADE-I de Juno qui catalogue et classe les événements de compression du vent solaire à Jupiter, validée face à un catalogue de franchissements publié.",
@@ -382,21 +395,20 @@ export const fr: Dictionary = {
         },
         {
           alt: "Carte des événements de compression prévus autour de Jupiter, par priorité",
-          caption:
-            "Événements de compression prévus autour de Jupiter, classés par priorité d’analyse.",
+          caption: "Événements de compression prévus, codés par couleur selon la priorité.",
         },
         {
           alt: "Spectrogramme en temps de vol montrant des ions lourds dans la magnétogaine",
           caption:
-            "Spectrogramme en temps de vol de l’événement d’octobre 2024 : des ions lourds sont visibles dans la magnétogaine, un indice de fuite.",
+            "Spectrogramme en temps de vol de l’événement d’octobre 2024 : des populations d’ions lourds sont visibles.",
         },
       ],
       outcome:
-        "Nous avons présenté ce travail sous forme de poster à MOP 2026 (Magnetospheres of the Outer Planets), à Toulouse, avec Fiona Martin, sous la supervision de Nicolas André (IRAP). Prochaines étapes : étendre l’analyse à l’instrument JEDI et, pour Saturne, aux données de Cassini.",
+        "Nous avons présenté ce travail sous forme de poster à MOP 2026, la conférence Magnetospheres of the Outer Planets, à Toulouse, du 26 au 31 juillet 2026.",
       outcomeFigures: [
         {
           alt: "Deux personnes à côté du poster à MOP 2026",
-          caption: "Avec Fiona Martin à MOP 2026, Toulouse.",
+          caption: "Avec Fiona Martin à MOP 2026. Superviseur : prof. Nicolas André (IRAP).",
         },
         {
           alt: "Poster : Plasma leakage through the magnetospheric boundaries of Jupiter and Saturn, présenté à MOP 2026",

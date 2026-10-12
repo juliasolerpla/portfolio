@@ -321,19 +321,33 @@ export const en: Dictionary = {
     },
     "plasma-magnetospheres": {
       shortTitle: "Giant-Planet Magnetospheres.",
-      title: "Plasma leakage through the magnetospheric boundaries of Jupiter (and, next, Saturn)",
+      title:
+        "Investigating plasma leakage through the magnetospheric boundaries of Jupiter and Saturn",
       kind: "MSc Research Project",
       summary:
-        "How does plasma escape Jupiter’s magnetosphere? A research project built on multi-instrument Juno data, extending next to Saturn.",
+        "Does plasma from inside Jupiter’s magnetosphere leak out across its boundaries? A research project using Juno spacecraft data.",
       body: [
-        "Jupiter is wrapped in the largest magnetosphere in the Solar System, a region dominated by its own magnetic field and shielded from the solar wind. Its volcanic moon Io fills it with heavy ions such as oxygen and sulphur. Does this plasma leak out across the magnetopause into the magnetosheath, and when?",
-        "I combine Juno magnetometer (FGM) data and JADE-I ion composition data with catalogues of bow-shock and magnetopause crossings. I built a pipeline that propagates the solar wind out to Jupiter, detects compression events and ranks them by where Juno was, validated against a published crossing catalogue. Time-of-flight spectrograms then show which ions are present on each side of the boundary.",
+        "Jupiter has the largest magnetosphere in the Solar System, and unlike Earth’s, much of its plasma comes from inside it. This internal plasma is carried outward toward the magnetospheric boundaries. Our project investigates whether this plasma actually leaks across the magnetopause, by looking for heavy ions of internal origin outside the magnetosphere: in the magnetosheath and in the solar wind.",
+        "We combine Juno magnetometer (FGM) data and JADE-I ion composition data with catalogues of bow-shock and magnetopause crossings. Solar-wind compression events push the magnetopause inward, so they are the best moments to catch Juno just outside the boundary. We built a pipeline that propagates the solar wind out to Jupiter, detects compression events, and ranks them by Juno’s position. We validated it against the Louis et al. (2023) catalogue. Time-of-flight spectrograms then show whether heavy ions are present on each side of the boundary.",
+      ],
+      sections: [
+        {
+          heading: "An internal plasma source: Io",
+          paragraphs: [
+            "Io, Jupiter’s volcanically active moon, is the main internal plasma source. Its sulphur-dioxide atmosphere loses more than a tonne of gas per second. Once ionised, this gas forms a torus of plasma that follows Io’s orbit and corotates with Jupiter’s 10-hour spin. The torus holds about 2 megatons of mostly S⁺ and O⁺ ions. Jupiter’s fast rotation then pushes this heavy plasma outward, through flux-tube interchange driven by centrifugal forces.",
+            "Because sulphur and oxygen ions come mainly from Io and are rare in the solar wind, they work as a tracer. If we find them outside the magnetopause, that is evidence the plasma has leaked out.",
+          ],
+        },
+      ],
+      resultsIntro: [
+        "In most compression events we found no heavy ions outside the magnetosphere, so a compression alone does not imply leakage. In the extreme compression of October 2024, however, heavy ions appear in the magnetosheath on day 294 (21 October), between 19:00 and 19:20: a candidate leakage interval.",
+        "Next steps: add JEDI energetic-particle data, and extend the study to Saturn with Cassini data. Saturn’s internal source is the moon Enceladus.",
       ],
       highlights: [
-        "Combined Juno magnetometer (FGM) and ion composition (JADE-I) data with boundary-crossing catalogues",
-        "Built and validated a pipeline that detects and ranks solar-wind compression events",
-        "Time-of-flight composition analysis across the magnetopause",
-        "Identified a candidate heavy-ion leakage event in October 2024",
+        "Combined Juno magnetometer (FGM) and ion composition (JADE-I) data with catalogues of bow-shock and magnetopause crossings",
+        "Built a pipeline that detects and ranks solar-wind compression events, validated against Louis et al. (2023)",
+        "Used heavy sulphur and oxygen ions of Io origin as a tracer of leakage",
+        "Identified a candidate leakage interval on 21 October 2024, between 19:00 and 19:20",
       ],
       resumeBullets: [
         "Built a pipeline on Juno FGM and JADE-I data that catalogues and ranks solar-wind compression events at Jupiter, validated against a published crossing catalogue.",
@@ -355,21 +369,20 @@ export const en: Dictionary = {
         },
         {
           alt: "Map of predicted compression events around Jupiter, colour-coded by priority",
-          caption:
-            "Predicted compression events around Jupiter, ranked by priority for follow-up analysis.",
+          caption: "Predicted compression events, colour-coded by priority.",
         },
         {
           alt: "Time-of-flight spectrogram showing heavy ions in the magnetosheath",
           caption:
-            "Time-of-flight spectrogram of the October 2024 event: heavy ions are visible in the magnetosheath, a candidate leakage signature.",
+            "Time-of-flight spectrogram of the October 2024 event: heavy-ion populations are visible.",
         },
       ],
       outcome:
-        "We presented this work as a poster at MOP 2026 (Magnetospheres of the Outer Planets), in Toulouse, with Fiona Martin, supervised by Nicolas André (IRAP). Next steps: extend the analysis to the JEDI instrument, and to Saturn with Cassini data.",
+        "We presented this work as a poster at MOP 2026, the Magnetospheres of the Outer Planets conference, in Toulouse, 26–31 July 2026.",
       outcomeFigures: [
         {
           alt: "Two people standing beside the poster at MOP 2026",
-          caption: "With Fiona Martin at MOP 2026, Toulouse.",
+          caption: "With Fiona Martin at MOP 2026. Supervisor: Prof. Nicolas André (IRAP).",
         },
         {
           alt: "Poster: Plasma leakage through the magnetospheric boundaries of Jupiter and Saturn, presented at MOP 2026",
